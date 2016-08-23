@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script src="jquery.xdomainajax.js"></script>
+<script>
+   function fn1() {
+      name = $("#fname").val()      
+      age = $("#fage").val()
+
+      $('#viewall').append("<li>이름:" +name+ "   나이:" + age + "</li>")
+      $("#viewall").listview("refresh")
+      
+   }
+   
+   
+   
+   function fn() 
+   {
+      kia= "http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=109"
+      arg = { type:'get',url:kia,
+            dataType:'xml',success:JFn, error: errFn }
+      $.ajax( arg )
+   }
+   function JFn( data ) 
+   {
+      data = data.responseText
+      //console.log(data)
+      xmlData = $.parseXML(data)
+      console.log(xmlData)
+       $(xmlData).find('location').each(xmlEach)
+   }
+   
+      function xmlEach(n,v)
+      {
+         //console.log(n,v)
+         console.log("이름:",$(v).find('city').text() )
+        // console.log("이름:",$(this).find('tmn').text() )
+        // console.log("이름:",$(v).find('tmEf').text() )
+         //console.log("나이:",$(v).find('age').text() )
+         $('#viewall').append("<li>" +$(v).find('city').text()+ "</li>")
+         
+         $('#viewall').append("<li> 최저기온:" +$(v).find('data').each(xmlEach1)+ "</li>")
+           //$("#viewall").listview("refresh")
+      }
+      
+      function xmlEach1(n,v)
+      {
+         $('#viewall').append("<li> 날짜:" +$(v).find('tmEf').text()+ "</li>")
+         $('#viewall').append("<li> 날씨:" +$(v).find('wf').text()+ "</li>")
+         $('#viewall').append("<li> 최저기온:" +$(v).find('tmn').text()+ "</li>")
+         $('#viewall').append("<li> 최고기온:" +$(v).find('tmx').text()+ "</li>")
+       
+      }
+      
+      
+   function errFn( err )
+   {
+      console.log("에러", err)
+   }
+</script>
+</head>
+<body>
+   <div data-role="page" id="pageone">
+
+    <div data-role="header">
+      <h1>입력해주세요</h1>
+    </div>
+
+    <div data-role="contets" class="ui-content">
+    
+    <ol data-role="listview" data-inset="true" id="viewall"> 
+        
+      </ol>
+     
+    <button onclick="fn()">확인</button>
+    </div>
+
+   <ol data-role="listview" data-inset="true" id="viewall"> 
+        
+      </ol>
+
+   
+    <div data-role="footer" data-position="fixed">
+     <h1>Footer Text</h1>
+    </div>
+</div>
+
+
+</body>
+</html>

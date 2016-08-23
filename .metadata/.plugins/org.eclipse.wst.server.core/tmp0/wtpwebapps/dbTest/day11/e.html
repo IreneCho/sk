@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function fn() {
+//		mydisp.innerText = foo.firstChild.nodeValue
+//		my = document.getElementsByTagName("a")
+//		mydisp.innerText = my[0].firstChild.nodeValue
+//		mydisp.innerText = foo.firstChild.nextSibling.firstChild.nodeValue
+//		mydisp.innerText = foo.lastChild.nodeValue
+//		mydisp.innerText = foo.childNodes[0].nodeValue //childNodes는 배열로 만듬
+//		mydisp.innerText = foo.childNodes[1].firstChild.nodeValue //childNodes의 1에는 a태그 전체이기 때문에 a의 firstChild를 해줘야 값이 나옴
+//		mydisp.innerText = foo.childNodes[2].nodeValue 
+
+		mydisp.innerText = foo.childNodes[1].attributes[1].nodeValue //attributes는 태그의 속성들을 받아옴
+
+	}
+</script>
+</head>
+<body>
+	<div id="mydisp">표시</div>
+	
+	<p id="foo">This is a paragraph of text with a
+	<a href="a.html" alt="hello">link</a>.....</p>
+	
+	<button onclick="fn()">확인</button>
+</body>
+</html>

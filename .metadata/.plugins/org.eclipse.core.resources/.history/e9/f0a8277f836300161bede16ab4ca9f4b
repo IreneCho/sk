@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<style>
+		#container{
+			width : 80%;
+			height : 80%;
+			margin : 0 auto;
+			text-align: center;
+		}
+		
+		#imgBox{
+			margin:20px;
+			padding:20px;
+		}
+		
+		#imgBox img{
+			width:400px;
+			height:400px;
+		}
+		
+		button{
+			width: 200px;
+			height: 50px;
+		}
+		
+		div{
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background-color: yellow;
+		}
+		
+	</style>
+	<script>
+	nCnt = 0
+	arr =[]
+	for(var i=1; i<6; i++){
+		arr.push("image/heart.PNG")
+		//alert(arr[i])
+	}
+	
+	function fn(){
+		my = setInterval( wan, 1000 )
+	}
+	
+	function wan(){
+		$("#mydiv").animate({"left":"+=5px"}, "slow");
+	}
+	
+	function fn1(){
+		clearInterval(my)	
+	}
+	
+	</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="mydiv"></div>
+			<div id="btnBox">
+				<button onclick="fn()">시작</button>
+				<button onclick="fn1()">중지</button>
+			</div>
+		</div>
+	</body>
+</html>

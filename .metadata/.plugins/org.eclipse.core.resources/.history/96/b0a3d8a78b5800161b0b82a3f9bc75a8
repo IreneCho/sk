@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+	section{
+	 width: 1024px;
+	 
+	}
+   .a{border: 2px solid black ;
+     	width:300px;
+      float: left;
+      margin: 5px;
+       }
+       span{display: block;
+         }
+         
+     
+</style>
+
+</head>
+<body>
+	<section>
+		
+		<span> 
+		<div class="a">
+		<iframe  width="300" height="180"src="https://www.youtube.com/embed/2GRP1rkE4O0" frameborder="0" allowfullscreen"></iframe>
+		<div ><center>빅뱅 - blue</center></div>
+		</div>
+		
+		
+		
+		<div class="a">
+		<iframe width="300" height="180" src="https://www.youtube.com/embed/2Cv3phvP8Ro" frameborder="0" allowfullscreen></iframe>
+		<div><center>빅뱅 - 거짓말</center></div>
+		</div>
+		
+		
+		<div class="a">
+		<iframe width="300" height="180" src="https://www.youtube.com/embed/ScorpVvqLwo" frameborder="0" allowfullscreen></iframe>
+		<div><center>빅뱅 - 마지막인사</center></div>
+		</div>
+		</span>
+		
+	
+		
+		
+		
+		
+		<br><br>
+		
+		<div class="a">
+		<iframe width="300" height="180" src="https://www.youtube.com/embed/JYmKVTutkVk" frameborder="0" allowfullscreen></iframe>
+		<div><center>빅뱅 - La La La</center></div>
+		</div>
+		
+		<div class="a">
+		<iframe width="300" height="180" src="https://www.youtube.com/embed/zlm6jZcGFbc" frameborder="0" allowfullscreen></iframe>
+		<div><center>빅뱅 - this love</center></div>
+		</div>
+		
+		<div class="a">
+		<iframe width="300" height="180" src="https://www.youtube.com/embed/_0Zt--jC8nk" frameborder="0" allowfullscreen></iframe>
+		<div><center>빅뱅 - We belong together</center></div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+	</section>
+
+</body>
+</html>

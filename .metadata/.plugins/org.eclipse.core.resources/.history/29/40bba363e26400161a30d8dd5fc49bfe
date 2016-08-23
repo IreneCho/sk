@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="pageone">
+
+		<div data-role="header">
+			<h1>Welcome To My Homepage</h1>
+		</div>
+
+		<div data-role="contets" class="ui-content">
+			<p>I Am Now A Mobile Developer!!</p>
+			<a href="pagetwo.html">두번째 페이지로 이동</a>
+		</div>
+		
+		<div id="mydiv">여기</div>
+	</div>
+	<script>
+	$(function () {
+		$('#mydiv').on('swipe', function() {
+			alert('call')
+		})
+	})
+	/* 
+	
+	$(document).on("pagecreate","#pageone",function(){
+
+		 alert('call')
+
+		});		
+ */	</script>
+</body>
+</html>

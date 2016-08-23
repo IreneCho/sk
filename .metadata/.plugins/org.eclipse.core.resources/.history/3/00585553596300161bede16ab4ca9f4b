@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="mydiv" style="background-color:yellow;width:100px;height:100px"></div>
+	<button id="mybtn">확인</button>
+	<button id="mybtn1" onclick="fn()">확인1</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	$(init)
+	function init(){
+	//	$('#mybtn').click(btnClick)
+	//	$('#mybtn').bind("click", btnClick)
+	//	$('#mybtn').on("click", btnClick) //bind, unbind처럼 on, off
+		$('#mydiv').click(divClick)
+	}
+	
+	function divClick() {
+		$("#mydiv").css('background-color','green')
+	}
+	function btnClick() {
+		alert('call')
+	}
+	
+	function fn() {
+	//	$('#mybtn').unbind("click") //속성값 없애줌 클릭 이후에 init함수 실행 안됨
+		$('#mybtn').off("click", btnClick)
+	}
+	
+</script>
+</html>

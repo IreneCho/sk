@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<header>
+		<center>
+			<h1>동남아 여행정보</h1>
+		</center>
+	</header>
+
+	<nav>
+		<center>
+			<a href="thailand.html" target="travle">태국</a> <a
+				href="hongkong.html" target="travle">홍콩</a> <a href="indonesia.html"
+				target="travle">인도네시아</a>
+		</center>
+	</nav>
+
+	<center>
+		<iframe frameborder="0" scrolling="no" name="travle" width="800"
+			height="800" src="thailand.html"></iframe>
+	</center>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	h1{
+		background-color: #144468;
+		color: white;
+		text-align: center;
+	}
+	*{ 
+		text-align: center;			
+	}
+		
+	
+</style>
+<script>
+	function order() {
+		my1 = document.querySelector('[type="text"]')
+		my2 = document.querySelector('[type="number"]')
+		my3 = document.querySelector('[type="email"]')
+		my4 = document.querySelector('[type="radio"]:checked')
+		my5 = document.querySelectorAll('[type="checkbox"]:checked')
+		my6 = document.querySelector('[type="time"]')
+		my7 = document.querySelector('#order')
+		
+		my8 = "";
+		for (var i = 0; i < my5.length; i++) {
+			my8 += my5[i].value+" ";
+		}
+		
+		view.value="";
+		view.value="고객명:" + my1.value + "\n" +
+				   "전화번호:" + my2.value + "\n" +
+				   "E-mail:" + my3.value + "\n" +
+				   "피자 사이즈:" + my4.value + "\n" +
+				   "토핑:" + my8 + "\n" +
+				   "희망배송시간:" + my6.value + "\n" +
+				   "배송시요청사항:" + my7.value;
+	}
+</script>
+</head>
+<body>
+	<h1>피자 주문서 </h1>
+	고객명: <input type="text"><br>
+	전화번호: <input type="number"><br>
+	E-mail: <input type="email"><br>
+	
+	<fieldset>
+		<legend>피자 사이즈</legend>
+		<input type="radio" value="Small" name="size">Small<br>
+		<input type="radio" value="Medium" name="size">Medium<br>
+		<input type="radio" value="Large" name="size">Large<br>
+	</fieldset>
+	<fieldset>
+		<legend>토핑</legend>
+		<input type="checkbox" value="beacon" name="topping">베이컨<br>
+		<input type="checkbox" value="cheese" name="topping">치즈<br>
+		<input type="checkbox" value="onion" name="topping">양파<br>
+		<input type="checkbox" value="mushroom" name="topping">버섯<br>	
+	</fieldset>
+
+	희망배송시간: <input type="time"><br>
+	배송시요청사항: <textarea id="order"></textarea><br> 
+	
+	<button onclick="order()">주문!!!!!!!</button><br>
+
+	<textarea id="view" cols="20" rows="20">주문내역</textarea>
+</body>
+</html>

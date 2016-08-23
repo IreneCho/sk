@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="my">
+	<div><p>테스트1</p></div>
+	<p>테스트2</p>
+	<p>테스트3</p>
+	</div>
+	<button onclick="fn()">확인</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function fn() {
+	//	$('#my').children('p').css('color','red')
+		$('#my > p').css('color','red')
+		
+	}
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function fn() {
+	//	$('img').attr('src','image/img2.jpg')
+	//	$('img').attr('src','image/img2.jpg').attr('width','100')//체인식 메소드
+		$('img').attr({src:'image/img2.jpg', width:'200', height:'200'})//JSON객체로 주는 방법
+	}
+</script>
+</head>
+<body>
+	<img src="image/img1.png">
+	<div id="mydiv">표시</div>
+	<button onclick="fn()">확인</button>
+</body>
+</html>

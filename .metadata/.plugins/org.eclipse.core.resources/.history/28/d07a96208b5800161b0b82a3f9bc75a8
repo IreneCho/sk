@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+.all{
+	width:100%;
+}
+div .img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 30%;
+}
+
+div .img:hover {
+    border: 1px solid #777;
+}
+
+div img {
+    width: 180px;
+    height: 200px;
+}
+
+div .desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.head{
+	padding: 15px;
+	text-decoration: underline;
+	text-align: center;
+	
+}
+</style>
+</head>
+<body>
+<div class="all">
+<div class="head">Gallery</div>
+<div class="img">
+    <img src="image/bigbang1.jpg">
+  <div class="desc">½Â¸®</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang2.jpg">
+  <div class="desc">´ë¼º</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang3.jpg">
+  <div class="desc">Å¾</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang4.jpg">
+  <div class="desc">ÅÂ¾ç</div>
+</div>
+<!-- 
+<div class="img">
+    <img src="image/bigbang5.jpg">
+  <div class="desc">GD</div>
+</div>
+
+
+<div class="img">
+    <img src="image/bigbang6.jpg">
+  <div class="desc">ºò¹ð</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang7.jpg">
+  <div class="desc">ºò¹ð</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang8.jpg">
+  <div class="desc">GD&TOP</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang9.jpg">
+  <div class="desc">GD&TOP</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang10.jpg">
+  <div class="desc">½Â¸®</div>
+</div>
+
+
+<div class="img">
+    <img src="image/bigbang11.jpg" >
+  <div class="desc">´ë¼º</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang12.jpg">
+  <div class="desc">TOP</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang13.jpg">
+  <div class="desc">ÅÂ¾ç</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang14.jpg">
+  <div class="desc">GD</div>
+</div>
+
+<div class="img">
+    <img src="image/bigbang15.jpg">
+  <div class="desc">ºò¹ð</div> -->
+</div>
+</div>
+</body>
+</html>
+

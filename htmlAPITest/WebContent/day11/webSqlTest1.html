@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function init() {
+		db = window.openDatabase('mydb','1.0','my Database', 1024*1024*3)		
+	}
+
+	function errFn() { //실패했을 때
+		mydisp.innerText = "실패"
+	}
+	
+	function successFn(){ //성공했을 때
+		mydisp.innerText = "성공"
+	}
+	
+	function dbInsert() {
+		db.transaction(function(tx) {
+	 		mysql = "insert into student(name, age) values('홍길동', 30)"
+		 	tx.executeSql(mysql);
+		}, errFn, successFn)
+	}
+
+	function dbUpdate() {
+		db.transaction(function(tx) {
+	 		mysql = "update student set name='테스트1' where name='홍길동'"
+		 	tx.executeSql(mysql);
+		}, errFn, successFn)
+	}
+	
+	function dbDelete() {
+		db.transaction(function(tx) {
+	 		mysql = "delete from student where name='테스트1'"
+		 	tx.executeSql(mysql);
+		}, errFn, successFn)
+	}
+	</script>
+</head>
+<body onload="init()">
+	<div id=mydisp>표시</div>
+	<button onclick="dbInsert()">추가</button>
+	<button onclick="dbUpdate()">수정</button>
+	<button onclick="dbDelete()">삭제</button>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function fn() {
+		arr = [10,20,30,40,50,60,70]
+	//	myobj = {name:'홍길동', age:30, addr:'서울시 중구'}
+		myobj = [{name:'홍길동', age:30, addr:'서울시 중구'}, myobj = {name:'임꺽정', age:40, addr:'서울시 도봉구'}]
+		$.each(myobj,arrFn)
+	}
+	//	$.each(arr,arrFn) //첫번째 인자에 arr객체, 두번째 인자는 callback함수
+/*  	$.each(arr, function (n,v) { //n은 값, v는 객체
+			console.log(n,v)
+		})
+	}
+ */ 	
+	function arrFn(n,v) { 
+	//	console.log(n,v)
+		console.log(v.name, v.age, v.addr)
+	}
+</script>
+</head>
+<body>
+	<div id="mydiv">표시</div>
+	<button onclick="fn()">확인</button>
+</body>
+</html>

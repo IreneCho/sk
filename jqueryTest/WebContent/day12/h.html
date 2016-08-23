@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+/* 	$(document).ready() //onload에 해당
+	
+	function init() { 
+		alert('call')
+	} */
+	
+/* 	$(document).ready(function() {
+		alert('call')
+	})
+*/
+	$(init)
+	function init() {
+	//	alert('call')
+		$('#mybtn').click(fn)
+	}
+	
+	function fn() {
+		$('#mydiv').text("대한민국")
+	}
+/* 	
+	$(function() {
+		$('#mybtn').click(function() { //익명함수로 실행
+			$('#mydiv').text("대한민국")
+		})
+	})
+ */
+ </script>
+</head>
+<body>
+	<div id="mydiv">표시</div>
+	<button id="mybtn" onclick="fn()">확인</button>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+8월 16, 2016 17:41:32.66 NEW SESSION
+8월 16, 2016 17:41:32.66 [6268:7128:0816/174132:ERROR:socket_stream.cc(210)] Closing stream with result -101
+8월 16, 2016 17:41:44.63 [6268:7128:0816/174144:ERROR:connection_factory_impl.cc(369)] Failed to connect to MCS endpoint with error -105
+8월 16, 2016 17:42:25.15 [6268:7128:0816/174225:ERROR:connection_factory_impl.cc(369)] Failed to connect to MCS endpoint with error -105
+8월 16, 2016 17:43:36.83 [6268:7128:0816/174336:ERROR:connection_factory_impl.cc(369)] Failed to connect to MCS endpoint with error -105
+
+8월 23, 2016 14:09:27.75 NEW SESSION
+8월 23, 2016 14:09:27.75 [6456:5532:0823/140927:ERROR:vcdecoder.cc(937)] FinishDecoding() called before parsing entire delta file window
+8월 23, 2016 14:09:27.75 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+	function fn() {
+		name = $("#fname").val()		
+		age = $("#fage").val()
+
+		$('#viewall').append("이름:" +name + "나이:" + age + "\n")
+		
+	}
+</script>
+</head>
+<body>
+   <div data-role="page" id="pageone">
+
+    <div data-role="header">
+      <h1>입력해주세요</h1>
+    </div>
+
+    <div data-role="contets" class="ui-content">
+     <label for="fname">Name</label>
+     <input type="text" placeholder="이름을 입력하세요" name="fname" id="fname">
+     
+     <label for="fname">Age</label>
+     <input type="text" placeholder="나이를 입력하세요" name="fage" id="fage">
+     
+    <button onclick="fn()">확인</button>
+    </div>
+
+	<ul data-role="listview" data-inset="true" id="viewall"> 
+				<li></li><br>
+		</ul>
+
+	
+    <div data-role="footer" data-position="fixed">
+     <h1>Footer Text</h1>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Responsive Web Design</title>
+<style>
+#page {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+
+#header {
+	height: 50px;
+}
+
+#main {
+	width: 600px;
+	float: left;
+}
+
+#sidebar {
+	width: 300px;
+	float: right;
+}
+
+#footer {
+	clear: both;
+}
+
+@media screen and (max-width: 980px) {
+	#page {
+		width: 94%;
+	}
+	#main {
+		width: 65%;
+	}
+	#sidebar {
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#main {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#header {
+		height: auto;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	#sidebar {
+		display: none;
+	}
+}
+
+#header, #main, #sidebar, #footer {
+	border: solid 1px red;
+}
+
+#header {
+	background-color: yellow;
+}
+
+#sidebar {
+	background-color: aliceblue;
+}
+
+#main {
+	background-color: aqua;
+}
+
+#footer {
+	background-color: coral;
+}
+</style>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<img src="image/logo.png">
+		</div>
+		<div id="main">
+			<h2>Main</h2>
+			... 에단이 기고한 글은 http://alistapart.com/article/responsive-web-design에서
+			볼 수 있다.
+		</div>
+		<div id="sidebar">
+			<h2>Sidebar</h2>
+			<ul>
+				<li>Fluid Grids</li>
+				<li>Media Queries</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<h2>Footer</h2>
+		</div>
+	</div>
+</body>
+</html>

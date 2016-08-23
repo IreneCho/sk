@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	body {
+		width: 375px;
+		height: 667px;
+		text-align: center;
+		background-color: #e0f3fa;
+	}
+	
+	button {
+		width: 80px;
+		margin: 20px;
+	}
+	
+	div {
+		border-radius: 20px 20px 20px 20px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#info
+	{
+		padding: 10px;
+		marin: 10px;
+		width: 300px;
+		height: 100px;
+		text-align: center;
+	}
+
+</style>
+<script>
+	window.onload=function(){
+		korea.onclick = function() {
+			fn1();
+			location.href="hw11_2.html";
+		}
+		china.onclick = function() {
+			fn2();
+			location.href="hw11_2.html";
+		}
+		west.onclick = function() {
+			fn3();
+			location.href="hw11_2.html";
+		}
+	}
+	function fn1(){
+		localStorage.setItem("rest_name","우래옥");
+		localStorage.setItem("rest_addr","서울 중구 주교동118-1");
+		localStorage.setItem("rest_tel","02-2265-0151");
+		localStorage.setItem("rest_menu1","깻잎닭볶음");
+		localStorage.setItem("rest_menu_img","menu1.PNG");
+		localStorage.setItem("rest_menu_info","깻잎닭볶음입니다.");
+		localStorage.setItem("rest_lat",37.5681850);
+		localStorage.setItem("rest_lng",126.9987090);
+	}
+	function fn2(){
+		localStorage.setItem("rest_name","하오디리오");
+		localStorage.setItem("rest_addr","서울 중구 남대문로 78");
+		localStorage.setItem("rest_tel","02-6361-8260");
+		localStorage.setItem("rest_menu1","짬뽕,탕수육");
+		localStorage.setItem("rest_menu_img","menu2.PNG");
+		localStorage.setItem("rest_menu_info","짬뽕,탕수육입니다.");
+		localStorage.setItem("rest_lat",37.5641450);
+		localStorage.setItem("rest_lng",126.9829500);
+	}
+	function fn3(){
+		localStorage.setItem("rest_name","겐로쿠우동");
+		localStorage.setItem("rest_addr","서울 중구 명동8나길 30-1");
+		localStorage.setItem("rest_tel","02-779-8788");
+		localStorage.setItem("rest_menu1","한상차림");
+		localStorage.setItem("rest_menu_img","menu3.PNG");
+		localStorage.setItem("rest_menu_info","서가앤쿡 한상차림입니다.");
+		localStorage.setItem("rest_lat",37.5613660,);
+		localStorage.setItem("rest_lng",126.9832770);
+	}
+
+</script>
+</head>
+
+<body>
+	<button onclick="fn1()">한식집</button>
+	<button onclick="fn2()">중식집</button>
+	<button onclick="fn3()">일식집</button>
+	<div id="map_div" style="width: 320px; height: 320px;"></div>
+	<div id="info"></div>
+	
+</body>
+</html>

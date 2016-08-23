@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+ <div data-role="page" id="pageone" data-theme="d">
+
+    <div data-role="header">
+      <h1>Welcome To My Homepage</h1>
+    </div>
+
+    <div data-role="contets" class="ui-content">
+       <fieldset class="ui-field-contain">
+    <label for="day">Select Day</label>
+    <select name="day" id="day">
+      <option value="mon">Monday</option>
+      <option value="tue">Tuesday</option>
+      <option value="wed">Wednesday</option>
+    </select>
+  </fieldset>
+
+<button onclick="fn()">확인</button>
+
+<button onclick="fn1()">눌러봐!</button>
+
+ <label for="switch">Flip toggle switch checkbox:</label>
+    <input type="checkbox" data-role="flipswitch" name="switch" id="switch" >
+
+
+  <label for="points">Points:</label>
+  <input type="range" name="points" id="points" value="0" min="0" max="100">
+    
+    
+    </div>
+
+<script>
+	
+	function fn1() {
+		//$('#switch').prop('checked',true).flipswitch('refresh')
+		a = $('#switch').prop('checked')
+		if(a)
+			alert("on..")
+		else
+			alert("off..")
+	}
+
+
+	nCnt = 0;
+	function fn() {
+		myIn = setInterval(sFn,1000)
+	}
+	
+	function sFn() {
+		nCnt+=10
+		$('#points').val(nCnt.toString()).slider('refresh')
+		if(nCnt == 100)
+			clearInterval(myIn)
+	}
+</script>
+
+
+  
+</body>
+</html>

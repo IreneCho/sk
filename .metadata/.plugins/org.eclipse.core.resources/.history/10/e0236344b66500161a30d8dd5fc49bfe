@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Client</title>
+<script>
+	function fn() {
+		eventSource = new EventSource("see.jsp")
+	}
+</script>
+</head>
+<body>
+	<button onclick="fn()">수신</button>
+</body>
+</html>

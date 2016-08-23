@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    
+    
+    <head>
+        <script>
+            function calculate(num){
+                board.value += num;
+            }
+        
+            function clean(){
+           
+                board.value  = "";
+            }
+        
+            
+            function final(){
+                try{
+                    board.value = eval(document.board.value);
+                }catch(e){alert('error')}
+            }
+            
+            
+     </script>
+        
+       
+    </head>
+    
+    
+    <body>
+        <table>
+            <tr>
+                <td height="0" bgcolor="#E2E2E2" colspan = "4">
+                   <input type="text" id = "yoyo" name="board" value = "">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value=" 7 " onclick="calculate('7')" class="btn"></td>
+                <td><input type="button" value=" 8 " onclick="calculate('8')" class="btn"></td>
+                <td><input type="button" value=" 9 " onclick="calculate('9')" class="btn"></td>
+                <td><input type="button" value=" + " onclick="calculate('+')" class="btn"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value=" 4 " onclick="calculate('4')" class="btn"></td>
+                <td><input type="button" value=" 5 " onclick="calculate('5')" class="btn"></td>
+                <td><input type="button" value=" 6 " onclick="calculate('6')" class="btn"></td>
+                <td><input type="button" value=" - " onclick="calculate('-')" class="btn"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value=" 1 " onclick="calculate('1')" class="btn"></td>
+                <td><input type="button" value=" 2 " onclick="calculate('2')" class="btn"></td>
+                <td><input type="button" value=" 3 " onclick="calculate('3')" class="btn"></td>
+                <td><input type="button" value=" * " onclick="calculate('*')" class="btn"></td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                    <input type="button" value=" 0 " onclick="calculate('0')" class="btn"  style = "width: 80px">
+                </td>
+                <td><input type="button" value=" / " onclick="calculate('/')" class="btn"></td>
+                <td><input type="button" value=" % " onclick="calculate('%')" class="btn"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" >
+                    <input type="button" value=" = " onclick="final()" class="btn"  style = "width: 80px">
+                </td>
+                 <td colspan="2" >
+                    <input type="button"   value=" clear " onclick= "clean()" class="btn"  style = "width: 80px">
+                </td>
+            </tr>
+            
+        </table>
+    
+    </body>
+</html>

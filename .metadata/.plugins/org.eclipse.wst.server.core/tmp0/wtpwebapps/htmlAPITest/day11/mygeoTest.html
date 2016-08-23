@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<title>Insert title here</title>
+<script>
+	function fn() {
+		navigator.geolocation.getCurrentPosition(successCallback,errorCallback);	
+	}
+	
+	function successCallback(position) {
+		lat = position.coords.latitude
+		lng = position.coords.longitude
+		mydiv.innerText = "위도:" + lat + "경도:" + lng
+	}
+	
+	function errorCallback(err) {
+		mydiv.innerText = "실패" + err
+	}
+</script>
+</head>
+<body>
+	<div id="mydiv">위치값</div>
+	<button onclick="fn()"></button>
+</body>
+</html>

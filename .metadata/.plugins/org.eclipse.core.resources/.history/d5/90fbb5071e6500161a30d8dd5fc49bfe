@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+    #mydiv{
+   
+      
+      
+      
+      width: 100%; 
+      margin: 0px auto;
+      }
+      /*
+       .row1{
+      
+      padding-left : 150px;
+      margin: auto;
+      }
+      */
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="main.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="board.html">Board</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <img src="image/logo.png"  class="img-responsive">
+  </div>
+</div>
+  
+
+
+<div id="mydiv" class="container-fluid bg-3 text-center">
+  <!-- <h3>Video</h3><br> -->   
+
+  <div class="row" >
+ 
+    <div class="col-sm-3">
+      <iframe  width="300" height="180"src="https://www.youtube.com/embed/2GRP1rkE4O0" frameborder="0" allowfullscreen">빅뱅</iframe>
+      <div style="font: bold 2.0em/1.0em 돋움체;"><center>BLUE</center></div>
+    </div>
+    <div class="col-sm-3">
+      <iframe width="300" height="180" src="https://www.youtube.com/embed/2Cv3phvP8Ro" frameborder="0" allowfullscreen></iframe>
+      <div style="font: bold 2.0em/1.0em 돋움체;"><center>거짓말</center></div>
+    </div>
+    <div class="col-sm-3">
+      <iframe width="300" height="180" src="https://www.youtube.com/embed/ScorpVvqLwo" frameborder="0" allowfullscreen></iframe>
+     <div style="font: bold 2.0em/1.0em 돋움체;"><center>마지막인사</center></div>    
+    </div>
+ 
+      
+  </div>
+
+  <div name="mydiv" class="row1">
+ 
+    <div class="col-sm-3">
+      <iframe  width="300" height="180"src="https://www.youtube.com/embed/JYmKVTutkVk" frameborder="0" allowfullscreen">빅뱅</iframe>
+      <div style="font: bold 2.0em/1.0em 돋움체;"><center>La La La</center></div>
+    </div>
+    <div class="col-sm-3">
+      <iframe width="300" height="180" src="https://www.youtube.com/embed/zlm6jZcGFbc" frameborder="0" allowfullscreen></iframe>
+      <div style="font: bold 2.0em/1.0em 돋움체;"><center>This love</center></div>
+    </div>
+    <div class="col-sm-3">
+      <iframe width="300" height="180" src="https://www.youtube.com/embed/_0Zt--jC8nk" frameborder="0" allowfullscreen></iframe>
+     <div style="font: bold 2.0em/1.0em 돋움체;"><center>We belong together</center></div>   
+    </div>
+ 
+      
+  </div>
+ 
+</div><br><br>
+
+<footer class="container-fluid text-center">
+  <p></p>
+</footer>
+
+</body>
+</html>

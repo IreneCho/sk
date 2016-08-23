@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="jquery.xdomainajax.js"></script>
+<script>
+	function fn() 
+	{
+		kia= "http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=109"
+ 		arg = { type:'get',url:kia,
+				dataType:'xml',success:JFn, error: errFn }
+		$.ajax( arg )
+	}
+	function JFn( response ) 
+	{
+	//	console.log(data)
+ 		response = response.responseText
+		xmlData = $.parseXML(response)
+		console.log(xmlData) 
+		$(response).find('location').each(function() {
+			var city = $(this).find('city').text();
+			if(city=='서울'){
+				$('#cityname').append(city);
+				$(this).find('data').each(function() {
+					var output = "시간:" + $(this).find('tmEf').text()+ "/"+
+								"날씨:" + $(this).find('wf').text();
+					$('#viewall').append("<li>" + output + "</li>");
+					$("#viewall").listview("refresh");
+				});
+				
+			}
+		})	
+		
+	}
+	function errFn( err )
+	{
+		console.log("에러", err)
+	}
+</script>
+</head>
+<body>
+
+	<div data-role="page" id="pagetwo">
+
+		<div data-role="header">
+			<h1>날씨 프로그램</h1>
+		</div>
+		<ul data-role="list-divider" id="cityname"></ul>
+		<div data-role="contents" class="ui-content">
+		<ul data-role="listview" data-inset="true" id="viewall"></ul>
+		<button onclick="fn()">확인</button>
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>
+
+

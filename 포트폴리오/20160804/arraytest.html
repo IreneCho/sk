@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+body {
+	width: 375;
+	height: 667px;
+	text-align: center;
+}
+
+h1 {
+	width: 100%;
+	/*  border: 1px solid black; */
+	text-align: center;
+	background: rgb(248, 255, 232); /* Old browsers */
+	/* FF3.6-15 */
+	/* Chrome10-25,Safari5.1-6 */
+	background: -moz-linear-gradient(135deg, rgba(248, 255, 232, 1) 0%,
+		rgba(227, 245, 171, 1) 33%, rgba(183, 223, 45, 1) 100%);
+	background: -o-linear-gradient(135deg, rgba(248, 255, 232, 1) 0%,
+		rgba(227, 245, 171, 1) 33%, rgba(183, 223, 45, 1) 100%);
+	background: -webkit-linear-gradient(135deg, rgba(248, 255, 232, 1) 0%,
+		rgba(227, 245, 171, 1) 33%, rgba(183, 223, 45, 1) 100%);
+	background: linear-gradient(135deg, rgba(248, 255, 232, 1) 0%,
+		rgba(227, 245, 171, 1) 33%, rgba(183, 223, 45, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8',
+		endColorstr='#b7df2d', GradientType=1);
+	/* IE6-9 fallback on horizontal gradient */
+}
+
+img {
+	width: 15%;
+	height: 15%;
+}
+
+section {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+viewer {
+	border: 
+}
+</style>
+
+<script>
+
+arr = [];
+function write2()
+{
+	arr.push({name: name2.value, age: age.value});
+}
+
+function view() {
+	result.innerText = "";
+	for ( n in arr){
+		console.log("이름", arr[n].name,"나이", arr[n].age)
+		result.innerText+=arr[n].name+arr[n].age +"\n";
+	}
+}
+
+</script>
+
+
+</head>
+
+<body>
+	<header>
+		<h1>학생관리</h1>
+	</header>
+
+	<section>
+		<span>이름:<input id="name2" type="text"></span><br> <span>나이:<input
+			id="age" type="number"></span><br>
+	</section>
+	<section>
+		<button onclick="write2()">입력</button>
+		<button onclick="view()">보기</button>
+	</section>
+
+	<div id="viewer"><p>이름</p>&nbsp;<p>나이</p></div>
+	
+	<div id="result"></div>
+
+</body>
+</html>

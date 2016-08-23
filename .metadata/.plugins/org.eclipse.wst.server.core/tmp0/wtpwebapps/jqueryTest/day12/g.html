@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function fn() {
+	//	$('#fruit > li').css('color','red')
+	//	$('#company').append('<li>기아</li>')
+	//	$('#fruit > li') //document.querySelectorAll('#fruit>li') arr객체 반환!
+/* 		liArr = $('#fruit > li')
+		for(n=0; n<liArr.length; n++){
+			//console.log(liArr[n].innerText)
+			console.log($(liArr[n]).text())
+		}
+	} */
+		$('#fruit > li').each(arrFn)
+		function arrFn(n,v) { //n은 배열의 인덱스, v는 li의 객체
+			//console.log(n,v)	
+			//console.log(v.innerText)
+			console.log($(v).text()) //jquery형식으로 받는 것
+		}
+	}
+</script>
+</head>
+<body>
+	<ul id="fruit">
+		<li>사과</li>
+		<li>딸기</li>
+		<li>포도</li>
+		<li>바나나</li>
+		<li>수박</li>
+		<li>참외</li>
+	</ul>
+		<ul id="company">
+		<li>삼성</li>
+		<li>현대</li>
+		<li>LG</li>
+		<li>SK</li>
+		<li>롯데</li>
+		<li>CJ</li>
+	</ul>
+	<div id="mydiv">표시</div>
+	<button onclick="fn()">확인</button>
+</body>
+</html>

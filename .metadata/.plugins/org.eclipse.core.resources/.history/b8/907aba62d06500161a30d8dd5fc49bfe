@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function connFn() {
+		url = "ws://localhost:9090"
+		socket = new WebSocket(url)
+		//$(socekt).on('open',함수)
+		socket.onopen = function(event) {
+			showDisp.innerText="접속완료.."
+		}
+		socket.onmessage = function(event) {
+			showDisp.innerText = "수신데이터:" + event.data
+		}
+		socekt.onclose = function(event) {
+			showDisp.innerText = "접속종료.."
+		}
+	}
+	
+	function sendFn() {
+		
+	}
+</script>
+</head>
+<body>
+	<button onclick="connFn()">접속</button>
+	<button onclick="sendFn()">전송</button>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BIGBANG</title>
+<style>
+#page {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+
+#header {
+	height: 130px;
+	text-align: center;
+}
+
+#main {
+	width: 600px;
+	float: left;
+}
+
+#sidebar {
+	width: 300px;
+	float: right;
+}
+
+#footer {
+	clear: both;
+	text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+	#page {
+		width: 94%;
+	}
+	#main {
+		width: 65%;
+	}
+	#sidebar {
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#main {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#header {
+		height: auto;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	#sidebar {
+		display: none;
+	}
+}
+</style>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<img src="image/logo.png">
+		</div>
+		<div id="sidebar">
+			<ul>
+				<li><a href="BigBangInfo.html" target="bigbang">Info</a></li>
+				<li><a href="photo.html" target="bigbang">Gallery</a></li>
+				<li><a href="bigbangvideo1.html" target="bigbang">Video</a></li>
+				<li><a href="board.html" target="bigbang">Board</a></li>
+			</ul>
+		</div>
+		
+		<div id="main">
+			<iframe frameborder="0" scrolling="no" name="bigbang" width="672" height="800" src="BigBangInfo.html"></iframe>
+		</div>
+		
+		<div id="footer">
+			<h5>이지선 전준민 조연승 황선미</h5>
+		</div>
+	</div>
+</body>
+</html>

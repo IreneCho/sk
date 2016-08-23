@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+body {
+	margin: 0 auto;
+	width: 960px;
+}
+
+header {
+	width: 100%;
+	text-align: center;
+}
+	nav{
+		float: left;
+		width: 30%;
+	}
+	section{
+		float: right;
+		width: 70%;
+	}
+li:hover {
+	text-decoration: underline;
+}
+
+li {
+	letter-spacing: 3px;
+/*	display: inline;*/
+}
+
+ul {
+	text-align: center;
+	letter-spacing: 6px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	padding: 15px 15px 15px 15px;
+}
+
+footer{
+		clear: both;
+		width: 100%;
+	}
+@media screen and (min-width:1000px){
+		div{
+			 font-size:30pt; width: 400px; height:100px;
+		}
+	}
+	@media screen and (min-width:640px) and (max-width:999px){
+		div{
+			 font-size:20pt; width: 300px; height:75px;
+		}
+	}
+	@media screen and (max-width:639px){
+		div{
+			 font-size:15pt; width: 200px; height:50px;
+		}
+	}
+
+</style>
+</head>
+<body>
+	<div>
+		<header>
+			<img src="image/logo.png">
+		</header>
+	<nav>
+		<ul>
+			<li><a href="BigBangInfo.html" target="bigbang">Info</a></li>
+			<li><a href="photo.html" target="bigbang">Gallery</a></li>
+			<li><a href="bigbangvideo1.html" target="bigbang">Video</a></li>
+			<li><a href="board.html" target="bigbang">Board</a></li>
+		</ul>
+	</nav>
+	<section>
+			<iframe frameborder="0" scrolling="no" name="bigbang" width="672" height="800" src="BigBangInfo.html"></iframe>
+	</section>
+		<footer>
+			<time>2016-08-02</time>
+		</footer>
+		이지선 전준민 조연승 황선미
+	</div>
+</body>
+</html>

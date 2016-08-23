@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="mydiv">표시</div>
+	<input id="myin" type="text"><br>
+	<input type="text"><br>
+	<select>
+		<option value="사과">사과</option>
+		<option value="딸기">딸기</option>
+		<option value="포도">포도</option>
+	</select>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	#(init)
+	function init() {
+		$('#myin').focus(function() {
+			$(this).css("background-color","red")
+		})
+	}
+</script>
+</html>

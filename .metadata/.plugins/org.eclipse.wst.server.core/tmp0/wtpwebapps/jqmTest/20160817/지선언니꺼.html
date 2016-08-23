@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Insert title here</title>
+
+      <!-- Include jQuery Mobile stylesheets -->
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <!-- Include the jQuery library -->
+      <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <!-- Include the jQuery Mobile library -->
+      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script src="script/jquery.xdomainajax.js"></script>
+      <script type="text/javascript">
+         city = 0;
+         function fn(a) {
+            weather = "http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=109";
+            arg = {
+                  type:"get", url:weather,
+                  dataType:"xml", success:JFn, error:errFn
+            }
+            city = a;
+            $.ajax(arg)
+         }
+         
+         function JFn( data ) {
+            data = data.responseText;
+            xmlData = $.parseXML(data);
+            $(xmlData).find("location:nth-child("+city+")").find("data").each(xmlEach)
+         }
+         
+         function errFn(err) {
+            console.log("에러", err)
+         }
+         
+         function xmlEach(n, v) {
+            wtime = $(v).find("data > tmEf").text();
+            wwf = $(v).find("data > wf").text();
+            wtmn = $(v).find("data > tmn").text();
+            wtmx = $(v).find("data > tmx").text();
+            
+            $("#lview"+city).append("<li><a href='#'>시간 :"+wtime+" / 날씨 :"+wwf
+                  +" / 최저기온 :"+wtmn+" / 최고기온 :"+wtmx+"</a></li>");
+            $("#lview"+city).listview("refresh");
+         }
+      </script>
+   </head>
+   <body>
+      <div data-role="page" id="pageone">
+           <div data-role="header">
+             <h1>날씨 프로그램</h1>
+           </div>
+           <div data-role="content" class="ui-content">
+             <div data-role="collapsible">
+              <h1 onclick="fn(1)">서울</h1>
+              <ul data-role="listview" data-inset="true" id="lview1">
+            
+               </ul>
+            </div>
+             <div data-role="collapsible">
+              <h1 onclick="fn(2)">인천</h1>
+              <ul data-role="listview" data-inset="true" id="lview2">
+            
+               </ul>
+            </div>
+             <div data-role="collapsible">
+              <h1 onclick="fn(3)">수원</h1>
+              <ul data-role="listview" data-inset="true" id="lview3">
+            
+               </ul>
+            </div>
+             <div data-role="collapsible">
+              <h1 onclick="fn(4)">파주</h1>
+              <ul data-role="listview" data-inset="true" id="lview4">
+            
+               </ul>
+            </div>
+           </div>
+      </div>
+   </body>
+</html>

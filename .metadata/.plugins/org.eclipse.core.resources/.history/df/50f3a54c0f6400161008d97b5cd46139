@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+
+<script>
+	function fn() {
+		param = {name:'홍길동', age:30}
+		arg = {type:'post',url:'my5.jsp',data:param, dataType: 'json',success:JFn, error:errFn}
+		$.ajax(arg)
+	}
+	function JFn(data) {
+		
+	}
+	function errFn(err) {
+		console.log("에러")
+	}
+	
+</script>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+</html>

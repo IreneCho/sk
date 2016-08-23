@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Client</title>
+<script>
+	function fn() {
+		eventSource = new EventSource("sse.jsp") //서버샌드 이벤트 받아들이기 위함
+		eventSource.addEventListener("mymassage", myFn)
+		eventSource.onmessage = function(event) {
+			console.log(event.data)
+		}
+		eventSource.mymessage = function(event) {
+			console.log(event.data)	
+		}
+		
+		eventSource.onerror = function() {
+			if(event.eventPhase == EventSource.CLOSED)
+				console.log("접속종료됨")
+			}
+	}
+	
+	function cfn() {
+		eventSource.close()
+	}
+</script>
+</head>
+<body>
+	<button onclick="fn()">수신</button>
+	<button onclick="cfn()">종료</button>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function myAjax() { 
+		xmlHttp = new XMLHttpRequest() //비동기 호출
+		xmlHttp.onreadystatechange = on_ready //이벤트 함수
+		myurl = "my5.jsp"
+		xmlHttp.open("GET", myurl, true) 
+		xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded") //비동기 요청이란 것 표시해준 거으로 꼭 필요
+		xmlHttp.send() 
+	}
+	function on_ready(){ 
+		if(xmlHttp.readyState == 4){ //수신이 정상적으로 진행됬다는 표시
+			if(xmlHttp.status == 200){ 
+				console.log(xmlHttp.responseXML) //XML object.. 문자열이 아닌 객체로 받아오는 것 
+				parseXML(xmlHttp.responseXML)
+			}
+		}
+	}
+	function parseXML(xmlData) {
+		nameArr = xmlData.getElementsByTagName("name") //arr
+		ageArr = xmlData.getElementsByTagName("age")
+		for(n=0; n<nameArr.length; n++){
+			console.log(nameArr[n].firstChild.nodeValue)
+		}	
+		for(n=0; n<ageArr.length; n++){
+			console.log(ageArr[n].firstChild.nodeValue)
+		}		
+	}
+	
+</script>
+</head>
+<body>
+	<div id="mydiv">표시영역</div>
+	이름:<input id="irum" type="text" name="myname"><br>
+	나이:<input id="nai" type="number" name="myage"><br>
+	<button onclick="myAjax()">확인</button>
+</body>
+</html>

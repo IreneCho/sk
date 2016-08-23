@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="pageone">
+
+		<div data-role="header">
+			<h1>Welcome To My Homepage</h1>
+		</div>
+
+		<div data-role="contets" class="ui-content">
+			<p>I Am Now A Mobile Developer!!</p>
+			<a href="pagetwo.html">두번째 페이지로 이동</a>
+
+			<div data-role="panel" id="myPanel" data-display="overlay">
+				<h2>Panel Header..</h2>
+				<p>Some text..</p>
+				<a href="#pageone" data-rel="close"
+					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
+					panel</a>
+			</div>
+
+			<div data-role="content">
+				<a href="#myPanel" data-rel="close" class="ui-btn ui-btn-inline">Open
+					Panel</a>
+				<table data-role="table" class="ui-responsive">
+					<thead>
+					<tr>
+						<th>헤더1</th>
+						<th>헤더2</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<th>테스트1</th>
+						<th>테스트2</th>
+					</tr>
+					<tr>
+						<th>테스트1</th>
+						<th>테스트2</th>
+					</tr>
+					<tr>
+						<th>테스트1</th>
+						<th>테스트2</th>
+					</tr>
+					</tbody>
+
+
+				</table>
+			</div>
+
+		</div>
+
+
+
+
+	</div>
+
+
+
+</body>
+</html>

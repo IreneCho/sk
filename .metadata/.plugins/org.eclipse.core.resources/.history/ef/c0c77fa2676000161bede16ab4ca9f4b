@@ -1,0 +1,75 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	list-style: none;
+}
+
+#wrap {
+	margin: 0 auto;
+	width: 640px;
+	height: 360px;
+	overflow: hidden;
+	position: relative;
+}
+
+#slideConteiner {
+	width: 5120px;
+	position: absolute;
+	-webkit-transition: all 1.0s ease-in-out;
+	-moz-transition: all 1.0s ease-in-out;
+	-o-transition: all 1.0s ease-in-out;
+}
+
+#slideConteiner img {
+	float: left;
+}
+
+#slideBar {
+	position: relative;
+	margin: 20px auto;
+	width: 125px;
+}
+
+#slideBar a {
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: url(imgs/dots.png) no-repeat;
+}
+
+#slideBar a.active {
+	background-position: 0 -30px;
+}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="slideConteiner">
+			<img src="image/img4.jpg" alt="" /> <img src="image/img5.jpg" alt="" />
+			<img src="image/img6.jpg" alt="" />
+		</div>
+		<button type="button" id="next"></button>
+		<button type="button" id="pre"></button>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"
+		integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+		crossorigin="anonymous"></script>
+	<script>
+		var arry = ["image/img4.jpg","image/img5.jpg","image/img6.jpg"]
+		
+
+		/* $('img').attr('src', 'image/img2.jpg').attr('width', '100') */
+	</script>
+</body>
+</html>

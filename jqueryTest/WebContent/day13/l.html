@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="my">
+	<div><p>테스트1</p></div>
+	<p id='myp'>테스트2</p>
+	<p class="myc">테스트3</p>
+	<p>테스트4</p>
+	<div><span>테스트5</span></div>
+	</div>
+	<button onclick="fn()">확인</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function fn() {
+	//	$('#my').children('p').css('color','red')
+	//	$('#my > p').css('color','red')
+	//	$('#my').find('p').css('color','red')
+	//	$('#my p').css('color','red')
+	//	$('#myp').prev().css('color','red')
+	//	$('#myp').next().css('color','red')
+	//	$('#myp').siblings().css('color','red')
+	//	$('#myp').parent().css('color','red') 
+	//	$('#my p').first().css('color','red') //테스트1만 빨강
+	//	$('#my p').last().css('color','red') //테스트4만 빨강
+	//	$('#my p').eq(1).css('color','red') //후손p의 첫번째: 테스트2만 빨강
+	//	$('p').filter(".myc").css('color','red') //p태그 중에서 클래스 속성이 myc인것만 선택: 테스트3
+	//	$('#my p').first().css('color','red')
+	//	$('p').not('.myc').css('color','red') //p태그 중에서 클래스 속성이 myc인것만 빼고 선택 : 테스트1,2,4
+		$('#my > div').has('span').css('color','red') //my에서 span속성을 가지고 있는 것 선택: 테스트5
+	
+	}
+</script>
+</html>

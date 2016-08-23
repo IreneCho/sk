@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  
+ .main{
+ 	width: 400px;
+ 	height: 400px;
+ 	width : 80%;
+	height : 80%;
+	margin : 0 auto;
+	text-align: center;
+ 	
+ 	}
+	.block {
+	  position:absolute;
+	  background-color:#abc;
+	  left:50px;
+	  width:90px;
+	  height:90px;
+	  margin:5px;
+	}
+
+	button{
+		width: 200px;
+		height: 50px;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+
+nCnt = 0
+
+function fn(){
+   my = setInterval( wan, 1000 )
+}
+
+function wan(){
+
+   if( nCnt >= 1){
+      
+      $(".block").animate({"left": "-=1000px"}, "noraml");
+      nCnt++
+   }
+   else if(nCnt == 10){
+      nCnt = 0
+   }
+
+  $(".block").animate({"left": "+=1000px"}, "normal");
+ 
+   nCnt++
+}
+
+function fn1(){
+   clearInterval(my)   
+}
+
+</script>
+</head>
+<body>
+ 
+  
+
+
+<div>
+            <button onclick="fn()">시작</button>
+            <button onclick="fn1()">중지</button>
+</div>
+<div class="main">
+<div class="block"></div>
+</div>
+
+
+</body>
+</html>

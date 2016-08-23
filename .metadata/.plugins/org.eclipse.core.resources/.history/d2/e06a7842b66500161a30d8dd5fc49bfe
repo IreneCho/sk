@@ -1,0 +1,7 @@
+<%@ page language="java" contentType="text/event-stream; charset=UTF-8"
+    pageEncoding="EUC-KR"%>
+<%
+    out.print("retry:3000\n");
+    out.print("dat:hellp\n\n");
+%>    
+ 

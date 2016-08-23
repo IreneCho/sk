@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ARAM COMPANY</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <link href="css/creative.min.css" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <div class="logo-header"><a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo1.png" height="30px"></a></div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">PEOPLE</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">WORKS</a>
+                    </li>
+                    <li>
+                     <li>
+                    	<a class="page-scroll" href="#notice">NOTICE</a>
+                     </li>
+                     <li>
+                    	<a class="page-scroll" href="#faq">FAQ</a>
+                     </li>
+                     <li>
+                     	<a class="page-scroll" href="#contact">CONTACT</a>
+                     </li>
+   
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">ARAM COMPANY</h1>
+                <hr>
+                <p>아람 커퍼니는 사용자 경험 디자인, 브랜딩, 그리고 테크놀러지 솔루션을 아우르는 통합 서비스를 제공하는 글로벌 크리에이티브 에이전시 입니다.</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">ABOUT</h2>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <h3>ARAM COMPANY</h3>
+                        <p class="text-muted" style="word-break: break-all;">아람 커퍼니는  통합 서비스를 제공하는 글로벌 크리에이티브 에이전시 입니다.</p>
+                        <p class="text-muted">커뮤니케이션이 자유롭게 오가는 특유의 회사 분위기, 맡은 프로젝트를 내 일처럼 여기는 주인의식, 하나에서 그치지 않고 두세 개를 시도하는 열정적인 에너지
+                        					   이 모든 요소들이 모여 아람 컴퍼니는 시대를 앞서가는 새로운 경험을 만들어 갑니다.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <h3>ARAM HISTORY</h3>
+                        <p class="text-muted" style="word-break: break-all;">2명의 웹개발자가 모여 시작한 아람 컴퍼니는 2016년까지 작은 스튜디오 규모를 유지하며 '창조적 소수'를 뜻하는 'Creative Minority'를 슬로건으로 삼아 소규모 부티크를 지향했습니다.</p><br>
+                        
+                        <p class="text-muted">2016.07.04<br>SK고용디딤돌을 기반으로 준비</p>
+                        <p class="text-muted">2016.08.23<br>아람 컴퍼니라는 이름으로 시작</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="service-box">
+                        <h3>ARAM VISION</h3>
+                        <h4>CREATIVE</h4>
+                        <p class="text-muted">창조적인</p>
+                        <h4>PROFESSIONAL</h4>
+                        <p class="text-muted">프로패셔널한</p>
+                        <h4>INTERACTIVE</h4>
+                        <p class="text-muted">상호협력</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">PEOPLE</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="img/jm1.jpg" class="img-circle" width="250" height="250">
+                        <h3>JUNEMIN JEON</h3>
+                        <h5>ARAM COMPANY CEO</h5>
+                        <p class="text-muted">2016.07 대한여행사 홈페이지 리뉴얼 프로젝트</p>
+                        <p class="text-muted">2016.08 BIGBANG 홈페이지 제작 프로젝트</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="img/ys.jpg" class="img-circle" width="250" height="250">
+                        <h3>YEONSEUNG CHO</h3>
+                        <h5>ARAM COMPANY CEO</h5>
+                        <p class="text-muted">2016.07 대한여행사 홈페이지 리뉴얼 프로젝트</p>
+                        <p class="text-muted">2016.08 BIGBANG 홈페이지 제작 프로젝트</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/obesity.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/obesityth.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Project1
+                                </div>
+                                <div class="project-name">
+                                   	 비만도 계산기
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/addressbook.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/addressbookth.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Project2
+                                </div>
+                                <div class="project-name">
+                                  	주소록 관리
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/pizzaorder.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/pizzaorderth.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Project3
+                                </div>
+                                <div class="project-name">
+                                	피자 주문서
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/calculator.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/calculatorth.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Project4
+                                </div>
+                                <div class="project-name">
+                                 	사칙연산 계산기
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/bigbang.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/bigbangth.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Proejct5
+                                </div>
+                                <div class="project-name">
+                                  	빅뱅 홈페이지
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/tour.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/tourth.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Project6
+                                </div>
+                                <div class="project-name">
+                                  	여행사 홈페이지
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="notice">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center table-responsive" >
+                    <h2 class="section-heading">NOTICE</h2>
+                    <hr class="primary">
+                    <table id = "mytable">
+		           		 <tr onclick="alert('a')">
+		           	   		  <thead><tr><th><a hreft="#">번호</a></th><th>이름</th><th>내용</th><th>날짜</th></tr></thead>
+		           		 </tr>
+	            			 <tbody id="mybody"></tbody>
+	             	  </table><br><br>                   
+                    
+                </div>
+                <div>
+                            <a href="boardinsert.html" >글쓰기</a>  
+                </div>
+   				 </div>
+                
+                
+                
+  			</div>
+            </div>
+        </div>
+    </section>
+    
+     <section id="faq">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">FAQ</h2>
+                    <hr class="primary">
+                </div>
+                <div class="col-lg-12 col-md-12">
+               <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           <a data-toggle="collapse" data-parent="#accordion"
+                              href="#collapse1">Q. 디자이너는 따로 뽑지 않나요?</a>
+                        </h4>
+                     </div>
+                     <div id="collapse1" class="panel-collapse collapse in">
+                        <div class="panel-body">현재 디자인 부서를 세분화하고
+                        	팀 확장을 계획하고 있어 빠른 시일내에 모집예정입니다.</div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           <a data-toggle="collapse" data-parent="#accordion"
+                              href="#collapse2"> Q. 어떤일을 하는 회사인가요?</a>
+                        </h4>
+                     </div>
+                     <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">저희 회사는 웹프론트엔드 개발자들이 모인 회사입니다.<br>
+                        HTML, CSS, JAVASCRIPT 등 다양한 언어를 다뤄 고객사의 홈페이지를 만들고 있습니다.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           <a data-toggle="collapse" data-parent="#accordion"
+                              href="#collapse3"> Q. 직원수가 어떻게 되나요?</a>
+                        </h4>
+                     </div>
+                     <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">현재는 두명이지만 꾸준히 공개채용을 할 예정입니다.</div>
+                     </div>
+                  </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           <a data-toggle="collapse" data-parent="#accordion"
+                              href="#collapse4"> Q. 신입사원의 초봉은 얼마나 되나요?</a>
+                        </h4>
+                     </div>
+                     <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">대기업에 못지않은 연봉 수준이라고 생각하시면 됩니다.<br>
+                        	면접시 포트폴리오를 제시하시면 추가협상이 가능합니다.</div>
+                     </div>
+                     <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           <a data-toggle="collapse" data-parent="#accordion"
+                              href="#collapse5"> Q. 프리랜서로 일할수 있나요?</a>
+                        </h4>
+                     </div>
+                     <div id="collapse5" class="panel-collapse collapse">
+                        <div class="panel-body">새 프로젝트 진행시 상시채용하고 있습니다.<br>
+                        	경력이 있으신 분은 회사 메일로 연락주시기 바랍니다. </div>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+
+
+
+            </div>
+            </div>
+        </div>
+    </section>
+
+     <section  class="bg-primary" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">CONTACT</h2>
+                    <hr class="light">
+                </div>
+                <div class="col-lg-12 text-center">
+                  <div id="map_div" style="height:300px;" class="col-lg-12 text-center"></div>
+                  <div class="">
+                  <h5>서울특별시 중구 필동로 1길 30</h5>
+                  <h5>3호선 동대입구역</h5>
+                  <h5>02-2260-3114</h5>
+                  <i class="fa fa-envelope-o fa-1x"> aram@aram.com</i>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+<script>
+
+window.onload = function()
+{
+	
+	navigator.geolocation.getCurrentPosition(successCallback,errorCallback);
+	
+	 var tr = $('#mybody').empty()
+		$.getJSON('board1.jsp',JFn)
+	
+	}
+
+	
+	function errorCallback(err) {
+	}
+	
+	
+	function successCallback(position) {
+		lat = position.coords.latitude
+		lng = position.coords.longitude
+		mapfn(lat, lng)
+	}
+
+		
+		function mapfn(lat,lng) {
+			var latlng = new google.maps.LatLng(lat,lng);
+
+			op={zoom:16, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP}
+			
+			gmap = new google.maps.Map(map_div, op);
+			
+			var marker = new google.maps.Marker({
+				position: latlng,
+				map: gmap,
+			});
+		
+		}
+	
+	
+</script>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC22tJMOfKt6SpU55-mY1BcfVzKoFuEZ9Q" type="text/javascript"></script>
+    
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+     <script>
+		function fn()
+		{
+			myname=na.value;
+			myage=ag.value
+			mybirth=bir.value
+			data = {name:myname,age:myage,birth:mybirth};
+			$('#mydiv').load("board2.jsp",data,comFn)
+		}
+		function comFn() {
+			alert("complete")
+		}
+		/* window.onload = function()
+		{
+			  var tr = $('#mybody').empty()
+				$.getJSON('board1.jsp',JFn)
+		} */
+		function JFn(data) {
+			for(n in data){
+				$('#mytable > tbody:last').append('<tr><td>'+eval(Number(n)+1)+'</td><td>' +data[n].name+ '</td><td>'+data[n].contents+'</td><td>'+data[n].date+'</td></tr>');
+		}
+		}
+	</script>
+
+</body>
+
+</html>

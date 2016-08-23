@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	body{
+	width: 375;
+	height: 667px;
+	text-align: center;
+	}
+	
+	h1{
+	width:100%;	
+/*  border: 1px solid black; */
+	text-align: center;
+	background: rgb(248,255,232); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+	background: -moz-linear-gradient(135deg, rgba(248,255,232,1) 0%, rgba(227,245,171,1) 33%, rgba(183,223,45,1) 100%);
+	background: -o-linear-gradient(135deg, rgba(248,255,232,1) 0%, rgba(227,245,171,1) 33%, rgba(183,223,45,1) 100%);
+	background: -webkit-linear-gradient(135deg, rgba(248,255,232,1) 0%, rgba(227,245,171,1) 33%, rgba(183,223,45,1) 100%);
+	background: linear-gradient(135deg, rgba(248,255,232,1) 0%, rgba(227,245,171,1) 33%, rgba(183,223,45,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', endColorstr='#b7df2d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+	
+	img{
+	width:15%;
+	height:15%;
+	}
+	
+	section{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	}
+	
+</style>
+
+<script>
+
+function fn()
+{
+	standard = ( height.value - 100 ) * 0.85
+	obesity = weight.value / standard * 100
+	
+		if(obesity > 200){
+			result.innerText = "비만"
+			myimg.src="image/body3.PNG"
+		}else if(109 < obesity && obesity < 120){
+			result.innerText = "과제충"
+			myimg.src="image/body4.PNG"
+		}else if(89 < obesity && obesity < 110){
+			result.innerText = "정상"
+			myimg.src="image/body2.PNG"
+		}else if(obesity <= 90){
+			result.innerText = "저체중"
+			myimg.src="image/body1.PNG"
+		}else{
+			alert("다시 입력해주세요:)")
+		}
+	h.innerText = height.value
+	w.innerText = weight.value
+}
+
+</script>
+
+
+</head>
+<body>
+ <header><h1>비만도 프로그램</h1></header>
+ 
+ <section>
+ 
+
+ <span>
+ 키:<input id="height" type="number"><br>
+ </span>
+  <span>
+ 몸무게:<input id="weight" type="number"><br>
+ </span>
+  </section>
+
+ 
+ <button onclick="fn()">계산</button><br>
+   <section>
+  
+ 
+<div>
+ 키: <span id="h"></span>cm<br>
+몸무게: <span id="w"></span>kg<br>
+결과: <span id="result"></span>	
+ </div> 
+
+  <img id="myimg" src="image/결과.jpg">
+
+ 
+ </section>
+
+</body>
+</html>

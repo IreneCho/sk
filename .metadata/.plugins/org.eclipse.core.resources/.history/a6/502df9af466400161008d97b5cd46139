@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="mydiv"></div>
+	<button onclick="fn()">확인</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.js"
+	integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+	crossorigin="anonymous"></script>
+<script src="jquery.xdomainajax.js"></script>	
+<script>
+	function fn() {
+
+		kia = "http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=109"
+
+		arg = {
+			type : 'get',
+			url : kia,
+			dataType : 'xml', //data를 xml파일로 만들어서 모두 보여줌
+			success : JFn,
+			error : errFn
+		}
+		$.ajax(arg)
+	}
+	function JFn(data) {
+		xmlData = $.parseXML(data)
+		data = data.responseText
+	//	console.log(data)
+	}
+
+	function errFn(err) {
+		console.log("에러", err)
+	}
+</script>
+</html>

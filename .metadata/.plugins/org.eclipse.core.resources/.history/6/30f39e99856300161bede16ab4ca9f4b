@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<style>
+
+		button{
+			width: 200px;
+			height: 50px;
+		}
+		
+		#mydiv{
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+	}
+		
+	</style>
+	<script>
+
+	function fn(){
+		my = setInterval( wan, 1000 )
+	}
+	nCnt = 0	
+	function wan(){
+
+		//if( nCnt == 2){
+		//	nCnt = 0
+		//	$("#mydiv").animate({"left":"+=5px"}, "slow");}
+		/* else if(){
+			$("#mydiv").animate({"left":"+=5px"}, "slow");} */
+			$("#mydiv").animate({"left":"+=5px"}, "slow")
+		nCnt++
+	}
+	
+	function fn1(){
+		clearInterval(my)	
+	}
+	
+	</script>
+	</head>
+	<body>
+
+				<div id="mydiv"></div>
+
+				<button onclick="fn()">시작</button>
+				<button onclick="fn1()">중지</button>
+			</div>
+		</div>
+	</body>
+</html>

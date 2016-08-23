@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<style>
+		#container{
+			width : 80%;
+			height : 80%;
+			margin : 0 auto;
+			text-align: center;
+		}
+		
+		#imgBox{
+			margin:20px;
+			padding:20px;
+		}
+		
+		#imgBox img{
+			width:400px;
+			height:400px;
+		}
+		
+		button{
+			width: 200px;
+			height: 50px;
+		}
+		
+		#mydiv{
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+	}
+		
+	</style>
+	<script>
+
+	function fn(){
+		my = setInterval( wan, 1000 )
+	}
+	nCnt = 0	
+	function wan(){
+
+		if( nCnt == 2){
+			nCnt = 0
+			$("#mydiv").animate({"left":"+=5px"}, "slow");}
+		/* else if(){
+			$("#mydiv").animate({"left":"+=5px"}, "slow");} */
+		
+		nCnt++
+	}
+	
+	function fn1(){
+		clearInterval(my)	
+	}
+	
+	</script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>연예인 이미지 뷰어</h1>
+			<div id="imgBox">
+				<div id="mydiv"></div>
+			</div>
+			<div id="btnBox">
+				<button onclick="fn()">시작</button>
+				<button onclick="fn1()">중지</button>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function dbOpen() {
+		db = window.openDatabase('mydb','1.0','my Database', 1024*1024*3)		
+		db.transaction(sqlFn, errFn, successFn)
+	}
+	
+	function sqlFn(tx) { //트랜젝션 처리하는 구문
+	mysql = "create table if not exists emp("
+				+" emp_id integer primary key autoincrement,"
+				+" name char(20), tel char(15))"
+		tx.executeSql(mysql);
+ 
+ 		//mysql = "insert into student(name, age) values('홍길동', 30)"
+ 		tx.executeSql(mysql);
+	}
+	
+	function sqlFn1(tx) { //트랜젝션 처리하는 구문
+		/* 		mysql = "create table if not exists emp("
+						+" emp_id integer primary key autoincrement,"
+						+" name char(20), tel char(15))"
+				tx.executeSql(mysql);
+		 */	
+		 		mysql = "insert into student(name, age) values('홍길동', 30)"
+		 		tx.executeSql(mysql);
+			}
+	
+	function dbInsert() {
+		db = window.openDatabase('mydb','1.0','my Database', 1024*1024*3)		
+		db.transaction(sqlFn1, errFn, successFn)
+	}
+	
+	function errFn() { //실패했을 때
+		mydisp.innerText = "실패"
+	}
+	
+	function successFn(){ //성공했을 때
+		mydisp.innerText = "성공"
+	}
+
+</script>
+</head>
+<body>
+	<div id=mydisp>표시</div>
+	<button onclick="dbOpen()">db오픈</button>
+	<button onclick="dbInsert()">db추가</button>
+</body>
+</html>

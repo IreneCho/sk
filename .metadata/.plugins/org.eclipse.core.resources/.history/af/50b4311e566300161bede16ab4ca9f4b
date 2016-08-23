@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	.myc{
+		border: 1px solid red;
+	}
+</style>
+</head>
+<body>
+	<div>test1</div>
+	<div>test2</div>
+	<div>test3</div>
+	<div>test4</div>
+	<button onclick="fn()">확인</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function fn() {
+		$('div:first').addClass('myc')
+	}
+</script>
+
+</html>

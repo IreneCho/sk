@@ -1,0 +1,49 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+</head>
+<body>
+	<div>
+		<div id="slideConteiner">
+			<img src="image/img4.jpg" id="imgTag" alt="" width="500"/>
+		</div>
+		<button type="button" id="pre">뒤</button>
+		<button type="button" id="next">앞</button>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"
+		integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+		crossorigin="anonymous"></script>
+	<script>
+		var arry = [ "image/img4.jpg", "image/img5.jpg", "image/img6.jpg" ]
+		var count = 0;
+
+		$("#next").click(function() {
+			count++
+			if (count == 3) {
+				count = 0;
+			}
+			$("#imgTag").attr({
+				'src': arry[count],
+				'width':'500'
+			})
+		})
+		
+		$("#pre").click(function() {
+			count--
+			if (count == -1) {
+				count = 0;
+			}
+			$("#imgTag").attr({
+				'src': arry[count],
+				'width':'500'
+			})
+		})
+
+		/* $('img').attr('src', 'image/img2.jpg').attr('width', '100') */
+	</script>
+</body>
+</html>

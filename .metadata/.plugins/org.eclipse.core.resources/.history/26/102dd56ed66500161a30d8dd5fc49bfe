@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>indexDBTest</title>
+<script>
+	function openFn() {
+		
+	}
+	
+	function insertFn() {
+		
+	}
+</script>
+</head>
+<body>
+	<button onclick="openFn()">db open</button>
+	<button onclick="insertFn()">추가</button>
+</body>
+</html>

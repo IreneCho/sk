@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	body{
+	width: 375;
+	height: 667px;
+	text-align: center;
+	}
+	
+	button{
+		width: 50px;
+	}
+	
+	h1{
+		text-align: center;
+	}
+</style>
+<script>
+	
+	function cal(num) {
+		result.value += num;
+	}
+	
+	function myclear() {
+         result.value = "";
+     }
+
+	 function myenter(){
+		 aa = result.value = eval(result.value);
+	 	 result.value=aa
+	 }
+</script>
+</head>
+<body>
+	<h1>계산기</h1>	
+	<input id ="result"><br>
+	<button name="cal" value="7" onclick="cal('7')">7</button>
+	<button name="cal" value="8" onclick="cal('8')">8</button>
+	<button name="cal" value="9" onclick="cal('9')">9</button>
+	<button name="cal" value="/" onclick="cal('/')">/</button><br>
+	<button name="cal" value="4" onclick="cal('4')">4</button>
+	<button name="cal" value="5" onclick="cal('5')">5</button>
+	<button name="cal" value="6" onclick="cal('6')">6</button>
+	<button name="cal" value="*" onclick="cal('*')">*</button><br>
+	<button name="cal" value="1" onclick="cal('1')">1</button>
+	<button name="cal" value="2" onclick="cal('2')">2</button>
+	<button name="cal" value="3" onclick="cal('3')">3</button>
+	<button name="cal" value="-" onclick="cal('-')">-</button><br>
+	<button name="cal" value="0" onclick="cal('0')">0</button>
+	<button name="cal" value="+" onclick="cal('+')">+</button><br>
+	<button name="cal" value="Clear" onclick="myclear()">Clear</button>
+	<button name="cal" value="=" onclick="myenter()">Enter</button>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+   body{
+   width: 375;
+   height: 667px;
+   text-align: center;
+   background-color: #e0f3fa;
+   }
+   
+   h1{
+   border-radius: 30px 30px 30px 30px;
+   width:100%;   
+   text-align: center;
+   background-color: #b6dffd;
+   }
+   
+   img{
+   width:10%;
+   height:10%;
+   }
+   
+   section{
+   padding-top: 60px;
+   padding-bottom: 60px;
+   }
+   
+   table{
+   
+   margin-left: auto;
+   margin-right: auto;
+   }
+  
+  div{
+   border-radius: 30px 30px 30px 30px;
+   margin-left: auto;
+   margin-right: auto;
+   width:300px;
+   height: 300px;   
+   background-color: #b6dffd
+  }
+</style>
+
+
+<script>
+
+arr=[]
+n=1
+
+function fn(){
+   if(n==1){
+      
+      arr.push({name:na.value , age:ag.value, birth:bd.value})
+      n++
+      }
+      else{
+      arr = arr.concat({name:na.value , age:ag.value,birth:bd.value}) 
+      }
+      
+}
+
+function fn1(){
+
+   
+   myrow = mytable.insertRow()
+   cell1 = myrow.insertCell()
+   cell2 = myrow.insertCell()
+   cell3 = myrow.insertCell()
+   
+   for(n in arr){
+   cell1.innerText = arr[n].name
+   cell2.innerText = arr[n].age
+   cell3.innerText = arr[n].birth
+   }
+}
+
+</script>
+
+
+</head>
+<body>
+ <header><h1>학생관리</h1></header>
+ 
+ <section>
+ 
+
+ <span>
+ 이름:<input id="na" type="text" ><br>
+ </span>
+  <span>
+ 나이:<input id="ag" type="number"><br>
+ </span>
+  <span>
+ 생일:<input id="bd" type="date"><br>
+ </span>
+  </section>
+
+ 
+ <button onclick="fn()" >입력</button>
+ <button onclick="fn1()" >보기</button>
+ 
+  <section>
+  
+ <div> 
+  <table id = "mytable">
+      <tr><th>이름</th><th>나이</th><th>생일</th></tr>
+   </table>
+</div> 
+  
+ 
+
+ <span>
+ <div >이름  나이</div>
+<div id="result">결과값</div>
+ </span>
+ 
+  -->
+ 
+ 
+ </section>
+</body>
+</html>

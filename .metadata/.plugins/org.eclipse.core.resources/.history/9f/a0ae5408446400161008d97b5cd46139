@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+	function fn() {
+		a = $("#fname").val()
+		alert(a)
+	}
+</script>
+</head>
+<body>
+   <div data-role="page" id="pageone">
+
+    <div data-role="header">
+      <h1>Welcome To My Homepage</h1>
+    </div>
+
+    <div data-role="contets" class="ui-content">
+     <label for="fname">First name</label>
+     <input type="text" placeholder="First name.." name="fname" id="fname">
+    <button onclick="fn()">확인</button>
+    </div>
+	  <div class="ui-field-contain">
+    <label for="fname">First name:</label>
+    <input type="text" name="fname" id="fname">
+    <label for="lname">Last name:</label>
+    <input type="text" name="lname" id="lname">
+  </div>
+  
+  
+	 <fieldset data-role="controlgroup">
+    <legend>Choose your gender:</legend>
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="female" value="female"> 
+  </fieldset>
+
+
+
+    <div data-role="footer" data-position="fixed">
+     <h1>Footer Text</h1>
+    </div>
+</div>
+
+
+</body>
+</html>

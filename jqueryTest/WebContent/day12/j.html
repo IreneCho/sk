@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function fn() {
+	//s	$('#fruit > li:eq(1)').css('color','red')
+	//	$('#fruit > li:gt(2)').css('color','red')
+	//	$('#fruit > li:lt(3)').css('color','red')
+	//	$('#fruit > li:first').css('color','red')
+	//	$('#fruit > li:last').css('color','red')
+	//	$('#fruit > li:even').css('color','red') //짝수
+	//	$('#fruit > li:odd').css('color','red') //홀수
+	//	$('#fruit > li:not(:eq(1))').css('color','red') //배열1빼고 다 레드
+	//	$("#fruit > li:contains('포도')").css('color','red')
+	//	$('#fruit > li:empty').text('키위') //아무것도 없는 곳에 '키위'넣어줌
+	//	$("#fruit > li:has('h3')").css('color','red') //h3태그를 가지고 있는 것을 선택
+	//	$('#fruit > li:first-child').css('color','red')
+	//	$('#fruit > li:last-child').css('color','red')
+		$('#fruit > li:nth-child(2n)').css('color','red')
+	}
+	
+	
+</script>
+</head>
+<body>
+	<ul id="fruit">
+		<li>사과</li>
+		<li>딸기</li>
+		<li>포도</li>
+		<li></li>
+		<li><h3>수박</h3></li>
+		<li>참외</li>
+	</ul>
+		<ul id="company">
+		<li>삼성</li>
+		<li>현대</li>
+		<li>LG</li>
+		<li>SK</li>
+		<li>롯데</li>
+		<li>CJ</li>
+	</ul>
+	<div id="mydiv">표시</div>
+	<button onclick="fn()">확인</button>
+</body>
+</html>

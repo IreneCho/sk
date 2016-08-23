@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	body{
+	width: 375;
+	height: 667px;
+	text-align: center;
+	}
+
+
+	h1{
+		background-color: #144468;
+		color: white;
+		text-align: center;
+		border-radius: 5px 5px 5px 5px;
+	}
+		
+	#all{
+		width: 400px;
+		margin-left: auto;
+   		margin-right: auto;
+	}
+</style>
+
+</head>
+<body>
+<div id="all">
+	<h1>피자 주문서 </h1>
+	고객명: <input type="text"><br>
+	전화번호: <input type="number"><br>
+	E-mail: <input type="email"><br>
+	
+	<fieldset>
+		<legend>피자 사이즈</legend>
+		<input type="radio" value="Small" name="size">Small<br>
+		<input type="radio" value="Medium" name="size">Medium<br>
+		<input type="radio" value="Large" name="size">Large<br>
+	</fieldset>
+	<fieldset>
+		<legend>토핑</legend>
+		<input type="checkbox" value="베이컨" name="topping">베이컨<br>
+		<input type="checkbox" value="치즈" name="topping">치즈<br>
+		<input type="checkbox" value="양파" name="topping">양파<br>
+		<input type="checkbox" value="버섯" name="topping">버섯<br>	
+	</fieldset>
+
+	희망배송시간: <input type="time"><br>
+	배송시요청사항: <textarea id="order"></textarea><br> 
+	
+	<button onclick="order()">주문!!!!!!!</button><br>
+
+	<textarea id="view" cols="30" rows="10">주문내역</textarea>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function order() {
+
+		myname = $('[type="text"]').val()
+		myphone = $('[type="number"]').val()
+		mymail = $('[type="email"]').val()
+		mysize = $('[name="size"]:checked').val()
+		
+		arr = []
+		n = 0;
+		$('[name="topping"]:checked').each(chFn) //상태에 해당되는것이 무언가 여러개다 하면 대부분 each쓰면 됨
+		function chFn(n,v) { 
+			arr[n] = $(v).val()
+			n++
+		}
+	
+		mytime = $('[type="time"]').val()
+		myplz = $('#order').val()
+
+		$('#view').val("고객명:" + myname + "\n" +
+				"전화번호:" + myphone+ "\n" +
+				"E-mail:" + mymail + "\n" +
+				"피자 사이즈:" + mysize + "\n" +
+				"희망배송시간:" + mytime + "\n" +
+				"토핑:" + arr + "\n" +
+				"배송시요청사항:" + myplz)	
+	
+	}
+		
+
+	
+	function fn1() { //append
+		myh1 = document.querySelector('h1')  
+		mydiv = document.createElement('div')
+		mydiv.innerText = "hello"
+		myh1.appendChild(mydiv)
+	}
+		
+		
+		
+		
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function myAjax() { 
+		xmlHttp = new XMLHttpRequest() //비동기 호출
+		xmlHttp.onreadystatechange = on_ready //이벤트 함수
+//		xmlHttp.open("GET", "a.jsp?myname=kim&myage=30", true) 
+//		xmlHttp.open("POST", "c10.html", true)
+		xmlHttp.open("POST", "a.jsp", true)
+		data = "myname=kim&myage=30" //포스트방식, 쿼리가 바디쪽에 실려서 실행 
+		xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded") //비동기 요청이란 것 표시해준 거으로 꼭 필요
+		xmlHttp.send(data) 
+	}
+	function on_ready(){ 
+		if(xmlHttp.readyState == 4){ //수신이 정상적으로 진행됬다는 표시
+			if(xmlHttp.status == 200){ 
+				mydiv.innerHTML = xmlHttp.responseText.trim()
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="mydiv">표시영역</div>
+	이름:<input type="text" name="myname"><br>
+	나이:<input type="number" name="myage"><br>
+	<button onclick="myAjax()">확인</button>
+</body>
+</html>

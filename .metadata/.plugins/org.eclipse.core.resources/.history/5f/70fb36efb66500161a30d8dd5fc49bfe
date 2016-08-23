@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Client</title>
+<script>
+	function fn() {
+		eventSource = new EventSource("see.jsp") //서버센드 이벤트 받아들이기 위함
+		eventSource.onmessage = function(event) {
+			console.log(event.data)
+		}
+		eventSource.onerror = function() {
+			console.log("에러") 
+		}
+	}
+</script>
+</head>
+<body>
+	<button onclick="fn()">수신</button>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+<style type="text/css">
+.testEle {
+   left: 50px;
+   top:50px;
+   display: inline-block;
+   background: #FF9148;
+   position: relative;
+   font-size: 0.9em;
+   color:#fff;
+   text-align:center;
+   width: 80px;
+   height: 60px; 
+}
+</style>
+</head>
+
+<body>
+   <div class='testEle'>Rankingis.com</div>
+</body>
+
+<script type="text/javascript">
+   $("#test1").click(function() { $(".testEle").animate({top:"30"}, 1000);
+checkPosition();});
+   $("#test2").click(function() { $(".testEle").animate({left:"30"}, 1000);
+checkPosition();});
+   $("#test3").click(function() { $(".testEle").animate({top:"+=30"}, 1000);
+checkPosition();});
+   $("#test4").click(function() { $(".testEle").animate({left:"+=30"}, 1000);
+checkPosition();});
+function var checkPosition() {
+   setTimeout(function() {
+      $(".testEle").text("left:" + $(".testEle").css("left") + " top:" + $(".testEle").css("top"));
+   }, 1200);
+};
+checkPosition();
+</script>
+</html>
+[출처] [jQuery] 제이쿼리에서 상대좌표, 절대좌표로 애니메이션 이동 효과 animate()|작성자 EnSSo
+

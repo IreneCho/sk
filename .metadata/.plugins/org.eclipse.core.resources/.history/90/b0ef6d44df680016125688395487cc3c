@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<style>
+	table {
+			border-collapse: collapse;
+			
+		}
+	table,th,td {
+		border-bottom: 1px solid black;
+		text-align: center;		
+		}
+	td {
+			height: 30px;
+			padding: 10px;		
+	}	
+	tr:hover {
+			background-color: rgb(213,213,213);
+		}
+/* 		
+			#mydiv{
+  display:none
+  }		
+ */  
+   body{
+   width: 375;
+   height: 667px;
+   text-align: center;
+   }
+   
+   
+   img{
+   width:10%;
+   height:10%;
+   }
+   
+   section{
+   padding-top: 60px;
+   padding-bottom: 60px;
+   }
+   
+   table{
+   
+   margin-left: auto;
+   margin-right: auto;
+   }
+  
+  #mydiv{
+   display:none;
+   border-radius: 20px 20px 20px 20px;
+   margin-left: auto;
+   margin-right: auto;
+   width:300px;
+   height: 300px;   
+  }
+  
+
+	</style>
+	
+	<script src="http://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+
+<script>
+function fn()
+{
+	//mynumber=numb.value;
+	myname=na.value;
+	mycon=con.value
+	mydate=dat.value
+	data = {name:myname,contents:mycon,date:mydate};
+	$('#mydiv').load("board2.jsp",data,comFn)
+	
+	location.href="index.html";
+	
+	
+}
+
+function comFn() {
+	alert("complete")
+}
+
+function fn2()
+{
+	  var tr = $('#mybody').empty()
+	$.getJSON('board1.jsp',JFn)
+}
+function JFn(data) {
+	
+	//for(n in data){
+		
+	//	$('#mytable > tbody:last').append('<tr><td>'+n+'</td><td>' +data[1].name+ '</td><td>'+data[1].contents+'</td><td>'+data[1].date+'</td></tr>');
+		
+	//}
+	alert('hello')
+	
+	console.log('data[1].contents')
+
+}
+</script>
+</head>
+<body>
+
+  <button onclick="fn()" href="index.html" >완료</button>
+ <button onclick="fn2()" >보기</button>
+ 
+  <div> 
+  <table id = "mytable">
+      <thead><tr><th>번호</th><th>이름</th><th>내용</th><th>날짜</th></tr></thead>
+      <tbody id="mybody"></tbody>
+   </table>
+</div> 
+
+
+ 
+  <section>
+</body>
+</html>

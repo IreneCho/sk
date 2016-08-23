@@ -1,0 +1,23 @@
+<%@ page language="java" import="org.json.simple.*" contentType="text/event-stream; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	JSONArray jarr = new JSONArray();
+	JSONObject jo = new JSONObject();
+	jo.put("mname", "명량");
+	jo.put("ncnt", 300);
+	jarr.add(jo);
+	
+	jo = new JSONObject();
+	jo.put("mname", "해적");
+	jo.put("ncnt", 500);
+	jarr.add(jo);
+	
+	String str;
+	str = String.format("data:%s\n\n", jarr.toJSONString());
+	
+	out.print("retry:3000\n");
+	out.print(str); //데이터의 개행 구분은 꼭 두번씩
+	//  out.print("event:mymessage\n");
+	//  out.print("data:hi....\n\n");
+    
+ %>

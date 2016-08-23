@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>indexDBTest</title>
+<script>
+	function openFn() {
+		request = indexedDB.open("myDB") //db생성
+		request.onupgradeneeded = function() {
+			db = request.result;
+			keyField = {keyPath:"sabun"}
+			store = db.createObjectStore("myBiz", keyField)
+			store.createIndex("by_name", "name")
+			store.createIndex("by_age", "age")
+			console.log("table create...")
+			mydiv.innerText = "table create"
+		}
+	}
+	
+	function insertFn() {
+		
+	}
+</script>
+</head>
+<body>
+	<div id="mydiv">표시</div>
+	<button onclick="openFn()">db open</button>
+	<button onclick="insertFn()">추가</button>
+</body>
+</html>

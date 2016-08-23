@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function myAjax() { 
+		xmlHttp = new XMLHttpRequest() //비동기 호출
+		xmlHttp.onreadystatechange = on_ready //이벤트 함수
+		myurl = "mys.jsp"
+		xmlHttp.open("GET", myurl, true) 
+		xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded") //비동기 요청이란 것 표시해준 거으로 꼭 필요
+		xmlHttp.send() 
+	}
+	function on_ready(){ 
+		if(xmlHttp.readyState == 4){ //수신이 정상적으로 진행됬다는 표시
+			if(xmlHttp.status == 200){ 
+				rcv = xmlHttp.responseText.trim()
+				console.log(typeof(rcv))
+				mydiv.innerHTML = rcv
+				myarr = JSON.parse(rcv)
+				toMyJson(rcv)
+			}
+		}
+	}
+	
+	function toMyJson(rcv) {
+		myj = JSON.parse(rcv)
+		for(n in myj){
+			console.log("이름:", myj[n].name, "나이:", myj[n].age)
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<div id="mydiv">표시영역</div>
+	이름:<input id="irum" type="text" name="myname"><br>
+	나이:<input id="nai" type="number" name="myage"><br>
+	<button onclick="myAjax()">확인</button>
+</body>
+</html>

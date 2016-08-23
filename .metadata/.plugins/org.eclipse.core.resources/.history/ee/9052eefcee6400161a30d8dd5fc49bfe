@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="pageone" data-transtition="slide">
+
+		<div data-role="header">
+			<h1>첫번째 페이지</h1>
+		</div>
+
+		<div data-role="contets" class="ui-content">
+		</div>
+
+		<div id="mydiv">이동1</div>
+
+
+	</div>
+
+	<div data-role="page" id="pagetwo" data-transtition="slide">
+
+		<div data-role="header">
+			<h1>두번째 페이지</h1>
+		</div>
+
+		<div data-role="contets" class="ui-content">
+		</div>
+	
+		<div id="mydiv">이동2</div>
+
+	</div>
+
+	<div data-role="page" id="pagethree" data-transtition="slide">
+
+		<div data-role="header">
+			<h1>세번째 페이지</h1>
+		</div>
+
+		<div data-role="contets" class="ui-content">
+		</div>
+	
+		<div id="mydiv">이동3</div>
+
+	</div>
+
+	<script>
+		$(function() {
+			$(document).on('swipe', "#pageone", function() {
+				$.mobile.changePage("#pagetwo",
+				{transition : 'slide'})
+				
+			})
+
+			$(function() {
+				$(document).on('swipe', "#pagetwo", function() {
+					$.mobile.changePage("#pagethree",
+					{transition : 'slide'})
+				})
+				
+				
+			$(function() {
+				$(document).on('swiperight', "#pagethree", function() {
+					$.mobile.changePage("#pagetwo",
+					{transition : 'slide'})
+					
+
+			})	
+		})
+			
+		
+		
+	
+	</script>
+</body>
+</html>

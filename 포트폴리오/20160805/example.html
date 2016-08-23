@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+   body{
+   width: 375;
+   height: 667px;
+   text-align: center;
+   }
+   
+   h1{
+   width:100%;   
+   border: 1px solid black;
+   text-align: center;
+   background-color: white;
+   }
+   
+   img{
+   width:10%;
+   height:10%;
+   }
+   
+   section{
+   padding-top: 60px;
+   padding-bottom: 60px;
+   }
+   
+   
+</style>
+
+
+<script>
+arr = []
+n = 1
+function fn1()
+{
+   if(n==1){
+   
+   arr.push({name:na.value , age:ag.value, birth:birth.value})
+   n++
+   }
+   else{
+   arr = arr.concat({name:na.value , age:ag.value, birth: birth.value}) 
+   }
+}
+
+function fn2() {
+myrow = mytable.insertRow()
+cell1 = myrow.insertCell() //tr추가
+cell2 = myrow.insertCell() //tr추가
+cell3 = myrow.insertCell()
+	for(n in arr){
+	cell1.innerText = arr[0].name
+	cell2.innerText = arr[0].age
+	cell3.innerText = arr[0].birth
+}
+}
+
+</script>
+
+
+</head>
+<body>
+ <header><h1>학생관리</h1></header>
+ 
+ <section>
+ 
+
+ <span>
+ 이름:<input id="name" type="text" ><br>
+ </span>
+  <span>
+ 나이:<input id="age" type="number"><br>
+ </span>
+   <span>
+ 생일:<input id="birth" type="date"><br>
+ </span>
+  </section>
+
+ 
+ <button onclick="fn1()" >입력</button><br>
+ <button onclick="fn2()" >보기</button><br>
+ 
+
+</body>
+</html>

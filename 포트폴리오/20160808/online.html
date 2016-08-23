@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+	function fn() {
+		my1 = document.querySelector("[type='text']");
+		my2 = document.querySelector("[type='tel']");
+		my3 = document.querySelector("[type='email']");
+		my4 = document.querySelectorAll("[type='radio']:checked");
+		my5 = document.querySelectorAll("[type='checkbox']:checked");
+		my6 = document.querySelector("[type='time']");
+		my7 = document.querySelector("textarea");		
+/* 		my = "";
+		
+		for (var i = 0; i < my4.length; i++) {
+			my += my4[i].value+" ";
+		}
+		 */
+		my8 = "";
+		for (var i = 0; i < my5.length; i++) {
+			my8 += my5[i].value+" ";
+		}
+		my5 = document.querySelector("select > option:checked");
+		view.value = "";
+		view.value = "고객명 : "+my1.value + "\n" +
+					 "전화번호 : "+my2.value + "\n"+
+					 "이메일 : "+my3.value + "\n"+
+					 "피자사이즈 : "+my + "\n"+
+					 "토핑선택 : "+my8+ "\n"+
+		 		 	 "희망배송시간 : "+my6.value + "\n"+
+		 		 	 "배송시요청사항 : "+my7.value + "\n";	
+	
+</script>
+</head>
+<body>
+	고객명: <input id=a1 type="text"><br>
+	전화번호: <input id=a2 type="tel"><br>
+	E-mail: <input id=a3 type="email"><br>
+	
+	<fieldset>
+		<legend>피자 사이즈</legend>
+		<input type="radio" name="size" value="small">Small<br>
+		<input type="radio" name="size" value="medium">Medium<br>
+		<input type="radio" name="size" value="large">Large<br>		
+	</fieldset>
+	<fieldset>
+		<legend>토핑 선택</legend>
+		<input type="checkbox" value="bacon">베이컨<br>
+		<input type="checkbox" value="cheese">치즈<br>
+		<input type="checkbox" value="onion">양파<br>
+		<input type="checkbox" value="mushroom">버섯<br>					
+	</fieldset>
+		희망배송시간:<input type="time" id="time" min="10:00" max="22:00"><br>
+		배송시요청사항:<textarea  rows="1" cols="20"></textarea><br><br>
+		<button onclick="fn()">주문하기</button><br>
+		<textarea id="view" rows="20" cols="20"></textarea>
+</body>
+</html>

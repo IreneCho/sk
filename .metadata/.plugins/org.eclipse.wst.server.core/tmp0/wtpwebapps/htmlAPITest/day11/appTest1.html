@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html manifest="my1.manifest">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	window.onload = function() { //버전이 바뀌엇을때 리프레쉬해서 캐쉬를 받아옴
+		applicationCache.onupdateready = function name() {
+			applicationCache.swapCache(); 
+			location.reload(); //새로 캐쉬된 것을 화면에 바로 띄워주는 것
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>hi test..hello</h1>
+	<img src="img2.jpg"><br>
+</body>
+</html>

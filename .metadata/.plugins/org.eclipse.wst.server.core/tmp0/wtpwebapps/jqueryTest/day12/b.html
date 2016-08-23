@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function fn() {
+	//	$('#mydiv').text('hello') //mydiv에 hello대치 시킴
+	//	s = $('#mydiv').text() 
+	//	alert(s) //mydiv 표시글자 alert
+	//	$('#mydiv').html('<h1>hello</h1>') //html태그 삽입
+	//	$('h1').append('<div>hello</div>') //덧붙이기
+	}
+	
+	function fn1() { //append
+		myh1 = document.querySelector('h1')  
+		mydiv = document.createElement('div')
+		mydiv.innerText = "hello"
+		myh1.appendChild(mydiv)
+	}
+</script>
+</head>
+<body>
+	<h1>테스트</h1>
+	<div id="mydiv">표시</div>
+	<button onclick="fn()">확인</button>
+</body>
+</html>

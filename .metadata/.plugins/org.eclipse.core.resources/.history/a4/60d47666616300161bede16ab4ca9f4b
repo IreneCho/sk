@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	img{
+		display: none;
+		width: 200px;
+		height: 200px;
+	}
+</style>
+</head>
+<body>
+	<button onclick="fn()">보여</button>
+	<button onclick="fn1()">숨어</button>
+	<img src="image/img2.jpg"><br>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function fn() {
+		$('img').show('slow') //"600"
+		$('#mydiv').text("보여짐")
+	}
+	
+	function fn1() {
+		$('img').hide('1000')
+		$('#mydiv').text("사라짐")
+	}
+</script>
+</html>

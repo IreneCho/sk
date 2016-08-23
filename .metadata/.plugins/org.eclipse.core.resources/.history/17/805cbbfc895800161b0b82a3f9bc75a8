@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style>
+	div{margin:10px; width:550px;}
+	img{display: block;
+		margin: 8px;
+	}
+	h1{font:bold;}
+	h2{font-size:15px;
+	   font:bold;}
+</style>
+</head>
+<body>
+<center>
+	<div>
+		<img alt="빅뱅" src="image/bigbangmain.jpg" />
+		<h1>빅뱅(BigBang) 가수</h1>
+		<p>
+		<h2>멤버</h2>
+		G-DRAGON(리더, 랩, 보컬), 태양(메인보컬, 랩), T.O.P(랩, 보컬), 대성(보컬), 승리(보컬)
+		<h2>소속사</h2>
+		YG 엔터테인먼트
+		<h2>데뷔</h2>
+		2006년 싱글 앨범 [Bigbang]
+		<h2>수상</h2>
+		2016년 제13회 한국대중음악상 올해의 노래상 
+		2016년 제13회 한국대중음악상 최우수 팝 노래상
+		<h2>경력</h2>
+		2014 한국관광 명예 홍보대사
+		</p>
+	</div>
+</center>
+</body>
+</html>

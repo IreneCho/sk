@@ -1,0 +1,16 @@
+<meta charset="EUC-KR">
+<div data-role="page" id="pagetwo">
+
+    <div data-role="header">
+      <h1>Welcome To My Homepage</h1>
+    </div>
+
+    <div data-role="contets" class="ui-content">
+     <p>여기는두번째페이지입니다.</p>
+      <a href="a.html">첫번째 페이지로 이동</a>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+     <h1>Footer Text</h1>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function connFn() {
+		url = "ws://172.17.138.194:9090"
+		socket = new WebSocket(url)
+		//$(socekt).on('open',함수)
+		socket.onopen = function(event) {
+			showDisp.innerText="접속완료.."
+		}
+		socket.onmessage = function(event) {
+			showDisp.innerText = "수신데이터:" + event.data
+		}
+		socket.onclose = function(event) {
+			showDisp.innerText = "접속종료.."
+		}
+	}
+	
+	function sendFn() {
+		socket.send(chatIn.value)
+	}
+</script>
+</head>
+<body>
+	입력:<input id="chatIn" type="text"><br>
+	<div id="showDisp">상태</div>
+	<button onclick="connFn()">접속</button>
+	<button onclick="sendFn()">전송</button>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+	<div data-role="page" id="pageone">
+
+		<div data-role="header">
+			<h1>Welcome To My Homepage</h1>
+		</div>
+
+		<div data-role="contets" class="ui-content">
+				
+			
+			<ul data-role="listview" data-inset="true"> <!-- 16x16사이즈 아이콘 -->
+				<li><a href="#"><img src="image/korea.png">KOREA</a></li>
+				<li><a href="#"><img src="image/france.jpg" class="ui-li-icon">FRANCE</a></li>
+				<li><a href="#"><img src="image/england.png" >ENGLAND</a></li>
+			</ul>
+		
+			<ul data-role="listview" data-inset="true">
+				<li data-role="list-divider">Company</li> <!-- 타이틀 --> 
+				<li><a href="#">LG</a></li>
+				<li><a href="#">삼성</a></li>
+				<li><a href="#">현대</a></li>
+				<li><a href="#">SK</a></li>
+			</ul>
+
+			<ul data-role="listview">
+				<li><a href="#">Default is right arrow</a></li>
+				<li data-icon="plus"><a href="#">data-icon="plus"</a></li>
+				<li data-icon="minus"><a href="#">data-icon="minus"</a></li>
+				<li data-icon="delete"><a href="#">data-icon="delete"</a></li>
+				<li data-icon="location"><a href="#">data-icon="location"</a></li>
+				<li data-icon="false"><a href="#">data-icon="false"</a></li>
+			</ul>
+
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h1>Footer Text</h1>
+		</div>
+		
+
+	</div>
+
+
+</body>
+</html>

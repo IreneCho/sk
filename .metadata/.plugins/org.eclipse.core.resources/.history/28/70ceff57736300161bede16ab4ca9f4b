@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	div{
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+	<div id="mydiv"></div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	$(function(){
+		
+	$('html').keydown(function fn(e){
+		if(e.keyCode == 37){
+			$("#mydiv").animate({"left":"-=10px"}, "slow");}
+		else if(e.keyCode == 39){
+			$("#mydiv").animate({"left":"+=10px"}, "slow");}
+		
+		})
+		})
+		
+</script>
+</html>

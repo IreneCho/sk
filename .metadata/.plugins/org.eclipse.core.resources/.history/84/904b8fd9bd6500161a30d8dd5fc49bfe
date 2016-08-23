@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Client side</title>
+<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+<script>
+	function fn() {
+		eventSource = new EventSource("sse.jsp") //서버샌드 이벤트 받아들이기 위함
+		eventSource.addEventListener("message", messageFn)
+		eventSource.addEventListener("mymessage", myFn)
+		/* eventSource.onmessage = function(event) {
+			console.log(event.data)
+		}
+		 */
+		eventSource.onerror = function() {
+			if(event.eventPhase == EventSource.CLOSED)
+				console.log("접속종료됨")
+			}
+	}
+	
+	function messageFn() {
+		console.log("message:", event.data)
+	}
+	
+	function myFn(event) {
+		console.log("mymessage:", event.data)
+	}
+	
+	function cfn() {
+		eventSource.close()
+	}
+</script>
+</head>
+<body>
+	<button onclick="fn()">수신</button>
+	<button onclick="cfn()">종료</button>
+</body>
+</html>

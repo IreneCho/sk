@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC22tJMOfKt6SpU55-mY1BcfVzKoFuEZ9Q"
+	  type="text/javascript"></script>
+<script>
+
+function fn() {
+	navigator.geolocation.getCurrentPosition(successCallback,errorCallback);	
+}
+	
+	
+	function errorCallback(err) {
+	//	mydiv.nnerText = "실패:" + err
+	}
+	
+	
+	function successCallback(position) {
+		lat = position.coords.latitude
+		lng = position.coords.longitude
+//		mydiv.innerText = "위도:" + lat + "경도" + lng
+		mapfn(lat, lng)
+	}
+	/*
+	function mapfn() {
+		map_div = document.getElementById("map_div");
+		
+	//	var latlng = new google.maps.LatLng(37.521636,126.92411);
+		/* op={zoom:16, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP}
+	
+		gmap = new google.maps.Map(map_div, op);
+		
+		var marker = new google.maps.Marker({
+			position: latlng,
+			map: gmap,
+			title: "집합 장소"
+		}); */
+		
+		function mapfn(lat,lng) {
+			var latlng = new google.maps.LatLng(lat,lng);
+
+			op={zoom:16, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP}
+			
+			gmap = new google.maps.Map(map_div, op);
+			
+			var marker = new google.maps.Marker({
+				position: latlng,
+				map: gmap,
+				title: "집합 장소"
+			});
+		
+		}
+	
+	
+</script>
+</head>
+<body>
+	<button onclick="fn()">지도보기</button>
+	<div id="map_div" style="width:320px; height:480px;"></div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>BIGBANG</title>
+<style media="screen and (min-width:1000px)">
+body {
+	margin: 0 auto;
+	width: 960px;
+}
+
+header {
+	width: 100%;
+	text-align: center;
+}
+
+#sidebar {
+	float: left;
+	width: 30%;
+	padding: 0px;
+	margin: 0px;
+}
+
+section {
+	float: right;
+	width: 70%;
+	padding: 0px;
+	margin: 0px;
+}
+
+li:hover {
+	text-decoration: underline;
+}
+
+li {
+	letter-spacing: 3px;
+}
+
+ul {
+	text-align: center;
+	letter-spacing: 6px;
+	border-bottom: 1px solid black; border-top : 1px solid black;
+	padding: 15px 15px 15px 15px;
+	border-top: 1px solid black;
+}
+</style>
+<style media="screen and (min-width:640px) and (max-width:999px">
+header {
+	width: 100%;
+	text-align: center;
+}
+
+div {
+	width: 300px;
+	height: 75px;
+}
+
+li:hover {
+	text-decoration: underline;
+}
+
+li {
+	letter-spacing: 3px;
+	display: inline;
+}
+
+ul {
+	text-align: center;
+	letter-spacing: 6px;
+	border-bottom: 1px solid black; border-top : 1px solid black;
+	padding: 15px 15px 15px 15px;
+	border-top: 1px solid black;
+}
+</style>
+<style media="screen and (max-width:639px)">
+header {
+	width: 100%;
+	text-align: center;
+}
+
+div {
+	width: 200px;
+	height: 50px;
+}
+
+li:hover {
+	text-decoration: underline;
+}
+
+li {
+	letter-spacing: 3px;
+	display: inline;
+}
+
+ul {
+	text-align: center;
+	letter-spacing: 6px;
+	border-bottom: 1px solid black; border-top : 1px solid black;
+	padding: 15px 15px 15px 15px;
+	border-top: 1px solid black;
+}
+</style>
+
+</head>
+<body>
+	<div id="sidebar">
+		<ul>
+			<li><a href="BigBangInfo.html" target="bigbang">Info</a></li>
+			<li><a href="photo.html" target="bigbang">Gallery</a></li>
+			<li><a href="bigbangvideo1.html" target="bigbang">Video</a></li>
+			<li><a href="board.html" target="bigbang">Board</a></li>
+		</ul>
+		<div>
+			<section>
+				<iframe frameborder="0" scrolling="no" name="bigbang" width="672"
+					height="800" src="BigBangInfo.html"></iframe>
+			</section>
+</body>
+</html>

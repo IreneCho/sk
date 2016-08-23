@@ -1,0 +1,6 @@
+<%@ page language="java" contentType="text/event-stream; charset=UTF-8"
+    pageEncoding="EUC-KR"%>
+<%
+    out.print("retry:3000\n");
+    out.print("dat:hello\n\n"); //데이터의 개행 구분은 꼭 두번씩
+ 
